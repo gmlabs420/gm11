@@ -1,0 +1,285 @@
+/* --------------------------------- */
+/* ---------RECENT-GMS-------------- */
+
+.recent-gms-section {
+    background-color: #68cbfc80;
+    border: 5px solid #68cbfc80; /* border for visibility */
+    padding: 0px;
+    padding-top: 15px;
+    border-radius: 5px;
+    width: 100%; 
+    height: 750px; /* Set the height in pixels */
+    align-items: center;
+    color: #ffeeb5f4;
+    max-width: 500px;
+    min-width: 500px; /* Set the minimum width in pixels */
+    margin: 0px auto;
+    box-shadow: 
+        0 3px 8px #ffeeb5f4,
+        inset 0 2px 4px rgba(133, 190, 255, 0.227),
+        inset 0 -3px 2px #000000ba; 
+    text-shadow: 
+        0 0 4px rgba(255, 238, 181, 0.8), /* Glowing effect */
+        0 0 5px rgba(38, 38, 38, 0.766), /* Larger glow for softer edge */
+        0 0 2px rgb(0, 75, 11); /* Even larger glow for extended soft edge */
+    transition: background, border 2s ease; /* Add transition for smooth background change */
+}
+
+.recent-gms-section:hover {
+    background-color: #68f7fc6e;
+    border: 5px solid #5bea62ab; /* White border for visibility */
+
+}
+
+/* --------------------------------- */
+
+.recent-gms-cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px; /* Added padding */
+    max-height: 470px; /* Limit the height to show 6 cards */
+    overflow-y: auto; /* Enable vertical scrolling */
+    border-radius: 5px;
+    background: #a2e0ff80;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.809);
+    transition: max-height 1s ease-out, padding 0.6s ease-out;
+    border: 3px solid rgb(255, 225, 0); 
+}
+
+.recent-gms-cards-container::-webkit-scrollbar {
+    width: 20px;
+    border: 3px solid rgb(0, 174, 255); 
+    border-radius: 5px;
+
+}
+
+.recent-gms-cards-container::-webkit-scrollbar-track {
+    background: #157ea7;
+    border-radius: 2px;
+    -webkit-appearance: none; /* Remove default appearance */
+    appearance: none; /* Remove default appearance */
+    outline: none;
+    transition: background 0.2s;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.809);
+    border: 3px solid rgb(0, 174, 255); 
+
+}
+
+.recent-gms-cards-container::-webkit-scrollbar-thumb {
+    -webkit-appearance: none; /* Remove default appearance */
+    appearance: none; /* Remove default appearance */
+    width: 5px; /* Thumb size */
+    height: 5px; /* Thumb size */
+    border-radius: 5px;
+    background-color: rgb(255, 225, 0); /* Same yellow as GM button */
+    cursor: pointer;
+    box-shadow: 
+        0 2px 4px rgba(135, 135, 135, 0.425), 
+        inset 0 2px 2px #ffeeb5, 
+        inset 0 -1px 3px rgba(0, 0, 0, 0.386); 
+    border: 3px solid #00aaff; /* Same border as GM button */
+}
+
+/* --------------------------------- */
+  
+.recent-gm-card {
+    background-color: #4A9DC7;
+    color: #ffeeb5;
+    padding: 10px;
+    border-radius: 5px;
+    border: 3px solid rgb(255, 225, 0);
+    box-shadow: 
+        0 1px 3px #ffeeb5,
+        inset 0 2px 4px rgba(133, 190, 255, 0.227),
+        inset 0 -2px 1px #000000ba;
+    text-shadow: 
+        0 0 4px rgba(255, 238, 181, 0.8), 
+        0 0 5px rgba(38, 38, 38, 0.766), 
+        0 0 2px rgb(0, 75, 11);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none; /* Remove underline */
+}
+
+.recent-gm-card:hover {
+    background-color: #ffc014ed;
+    color: #00f2ff;
+    border: 3px solid #c4ff72ab; /* border for visibility */
+    transform: translateY(-2px);
+}
+
+/* --------------------------------- */
+  
+.gm-card-avatar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.gm-card-avatar img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-bottom: 1px;
+    box-shadow: 
+        0 2px 4px rgba(135, 135, 135, 0.425), 
+        inset 0 2px 2px #ffeeb5, 
+        inset 0 -1px 3px rgba(0, 0, 0, 0.232); 
+    border: 3px solid rgb(255, 225, 0);
+}
+
+/* --------------------------------- */
+  
+.recent-gm-card p {
+    margin: 0px 0;
+    text-align: center;
+}
+
+.gm-mints {
+    font-weight: bold;
+    margin-top: 0px;
+}
+
+/* --------------------------------- */
+
+.recent-gms-top-container {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+
+.recent-gms-header-box h1 {
+    margin-left: 190px; /* Adjust alignment as needed */
+    margin-top: 25px;
+}
+
+.recent-gms-info-icon-box {
+    margin-right: 17px; /* Adjust alignment as needed */
+    margin-bottom: 31px;
+}
+
+.recent-gms-info-icon {
+    font-size: 20px;
+    cursor: pointer;
+    text-shadow: 0 0 4px rgba(255, 238, 181, 0.8), 0 0 5px rgba(38, 38, 38, 0.766), 0 0 2px rgb(0, 75, 11);
+    color: #ffeeb560;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recent-gms-info-icon:hover {
+    color: #ffeeb5;
+}
+
+.recent-gms-info-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.recent-gms-info-screen.show {
+    display: flex;
+}
+
+.recent-gms-info-content {
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    background: #a2e0ff;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.95);
+    color: #333;
+    width: 375px;
+    height: 375px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    padding: 10px;
+    border: 3px solid rgb(255, 225, 0);
+}
+
+.recent-gms-info-content h2 {
+    margin-top: 0px;
+}
+
+.recent-gms-info-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 40px;
+    cursor: pointer;
+    text-shadow: 0 0 4px rgba(255, 238, 181, 0.8), 0 0 5px rgba(38, 38, 38, 0.766), 0 0 2px rgb(0, 75, 11);
+    color: #ffeeb5;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* --------------------------------- */
+/* ----------Contract Info---------- */
+
+.gms-minted-contract-info {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    width: 100%; /* Set the width in pixels */
+    height: 50px; /* Set the height in pixels */
+}
+
+.gms-minted-recessed-field {
+    background: #a2e0ff80;
+    border-radius: 5px;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.809);
+    padding: 5px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    align-items: center;
+    display: flex; /* Add flex display */
+    justify-content: center; /* Center align horizontally */
+    color: #ffeeb5f4;
+    z-index: 1;
+    font-size: 0.5em;
+    width: 80%; 
+    height: 90px; /* Set the height in pixels */
+    margin-left: auto; 
+    margin-right: auto;
+    transition: max-height 1s ease-out, padding 0.6s ease-out;
+    border: 3px solid rgb(255, 225, 0); /* border for visibility */
+    text-shadow: 
+        0 0 4px rgba(255, 238, 181, 0.8), /* Glowing effect */
+        0 0 5px rgba(38, 38, 38, 0.766), /* Larger glow for softer edge */
+        0 0 2px rgb(0, 75, 11); /* Even larger glow for extended soft edge */
+}
+
+.gms-minted-action-button {
+    background-color: #4A9DC7;
+    color: #ffeeb5;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 3px solid rgb(255, 225, 0);
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 1px 3px #ffeeb5, inset 0 2px 4px rgba(133, 190, 255, 0.227), inset 0 -2px 1px #000000ba;
+    text-shadow: 0 0 4px rgba(255, 238, 181, 0.8), 0 0 5px rgba(38, 38, 38, 0.766), 0 0 2px rgb(0, 75, 11);
+}
+
+.gms-minted-action-button:hover {
+    background-color: #ffc014ed;
+    color: #00f2ff;
+}

@@ -1,0 +1,418 @@
+/* --------------------------------- */
+/* --------------------------------- */
+/* --------------------------------- */
+/* ------GM Fishin-------------------- */
+
+.fishing-game-container {
+    position: relative;
+    background-color: #68cbfc80;
+    border: 5px solid #68cbfc80;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 500px;
+    min-width: 500px;
+    height: 750px;
+    margin: 0 auto;
+    box-shadow: 0 3px 8px #ffeeb5f4, inset 0 2px 4px rgba(133, 190, 255, 0.227), inset 0 -3px 2px #000000ba;
+    text-shadow: 0 0 4px rgba(255, 238, 181, 0.8), 0 0 5px rgba(38, 38, 38, 0.766), 0 0 2px rgb(0, 75, 11);
+    transition: background 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffeeb5f4;
+}
+
+.fishing-game-container:hover {
+    background-color: #68f7fc6e;
+    border: 5px solid #5bea62ab; /* White border for visibility */
+
+}
+
+.fishing-game-instructions {
+    margin-top: 0px;
+}
+
+.fishing-game-board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    width: 95%;
+    border: 2px solid rgb(255, 225, 0);
+    background-color: #1E90FF; /* Ocean color */
+    border-radius: 10px;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden; /* Ensure fish stay within the board */
+    flex-direction: column;
+}
+
+.waves-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Ensure waves stay within the board */
+}
+
+.wave {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(to top, rgba(0, 191, 255, 0.963) 20%, transparent 20%);
+    background-size: 40% 40%;
+    opacity: 0.5;
+    animation: wave 8s linear infinite;
+}
+
+.wave:nth-child(2) {
+    animation-delay: 1s;
+    background: linear-gradient(to top, rgba(0, 0, 139, 0.6) 20%, transparent 20%);
+    background-size: 20% 20%;
+}
+
+.wave:nth-child(3) {
+    animation-delay: 1.5s;
+    background: linear-gradient(to top, rgb(255, 255, 255) 10%, transparent 20%);
+    background-size: 20% 20%;
+}
+
+.wave:nth-child(4) {
+    animation-delay: 1.5s;
+    background: linear-gradient(to top, rgb(255, 255, 255) 10%, transparent 20%);
+    background-size: 20% 20%;
+}
+
+@keyframes wave {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.3);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.random-fish,
+.random-gm {
+    position: absolute;
+    animation: swim 10s linear infinite;
+}
+
+.random-fish {
+    color: #ff0000; /* Red color for fish */
+    animation: swim 10s linear infinite;
+
+}
+
+.random-gm {
+    color: #ffeb3b; /* Yellow color for GM circles */
+    animation: swim 10s linear infinite;
+
+}
+
+@keyframes swim {
+    from {
+        right: -10%;
+    }
+    to {
+        left: 110%;
+    }
+}
+
+.paused {
+    animation-play-state: paused !important;
+}
+
+.hit-area {
+    position: absolute;
+    top: 50%; /* Center the hit area vertically */
+    left: 50%; /* Center the hit area horizontally */
+    transform: translate(-50%, -50%);
+    width: 150px; /* Adjust the size as needed */
+    height: 150px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0); /* Transparent hit area */
+}
+
+.ripple-container {
+    position: absolute;
+    top: 50%; /* Center the ripple vertically */
+    left: 50%; /* Center the ripple horizontally */
+    transform: translate(-50%, -50%);
+}
+
+.ripple {
+    width: 150px; /* Match the hit area size */
+    height: 150px; /* Match the hit area size */
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    position: absolute;
+    animation: ripple 1s ease-out infinite;
+}
+
+.ripple:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.ripple:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes ripple {
+    0% {
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(2);
+        opacity: 0;
+    }
+}
+
+.caught-fish {
+    font-size: 40px;
+    font-weight: bold;
+    animation: swim-in 1s ease-out;
+}
+
+.animated-fish-info {
+    animation: fish-info-out 2s forwards;
+}
+
+@keyframes swim-in {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fish-info-out {
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+.fish-info {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.fishing-game-status-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.fishing-game-status-box {
+    display: flex;
+    align-items: center;
+    background: #a2e0ff80;
+    border-radius: 5px;
+    padding: 10px 20px;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.809);
+    text-align: center;
+    border: 2px solid rgb(255, 225, 0);
+    flex-direction: row;
+    margin: 5px 20px; /* Adjust margin to bring the boxes closer together */
+}
+
+.fishing-game-status-label {
+    font-weight: bold;
+    font-size: 30px;
+    margin: 0 10px;
+}
+
+.fishing-game-status-box p {
+    font-size: 40px; /* Make the score and time numerals larger */
+    margin: 0 10px;
+}
+
+.fishing-game-over-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffeeb5;
+    z-index: 10;
+}
+
+.fishing-game-over-message {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.fishing-game-final-score {
+    font-size: 20px;
+}
+
+.fishing-game-controls {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.control-button {
+    background-color: #4A9DC7;
+    color: #ffeeb5;
+    padding: 8px;
+    width: 60px;
+    height: 60px;
+    font-size: 25px;
+    border-radius: 5px;
+    border: 2px solid rgb(255, 225, 0);
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 1px 3px #ffeeb5, inset 0 2px 4px rgba(133, 190, 255, 0.227), inset 0 -2px 1px #000000ba;
+    margin: 5px 20px;
+    text-shadow: 0 0 4px rgba(255, 238, 181, 0.8), 0 0 5px rgba(38, 38, 38, 0.766), 0 0 2px rgb(0, 75, 11);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.control-button:hover {
+    background-color: #ffc014ed;
+    color: #00f2ff;
+    border: 2px solid rgb(255, 225, 0);
+    transform: translateY(-2px);
+}
+
+.cast-control-button {
+    background-color: #4A9DC7;
+    color: #ffeeb5;
+    padding: 8px;
+    width: 80px;
+    height: 80px;
+    font-size: 25px;
+    border-radius: 5px;
+    border: 2px solid rgb(255, 225, 0);
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 1px 3px #ffeeb5, inset 0 2px 4px rgba(133, 190, 255, 0.227), inset 0 -2px 1px #000000ba;
+    margin: 5px 20px;
+    text-shadow: 0 0 4px rgba(255, 238, 181, 0.8), 0 0 5px rgba(38, 38, 38, 0.766), 0 0 2px rgb(0, 75, 11);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cast-control-button:hover {
+    background-color: #ffc014ed;
+    color: #00f2ff;
+    border: 2px solid rgb(255, 225, 0);
+    transform: translateY(-2px);
+}
+
+.achievement-popup {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    color: #ffeeb5;
+    animation: fade-in-out 2s forwards;
+}
+
+@keyframes fade-in-out {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Info Icon Specific CSS */
+.fishing-game-top-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 105%;
+}
+
+.fishing-game-header-box {
+}
+
+.fishing-game-header-box h1 {
+    margin: 0;
+    margin-left: 145px;
+}
+
+.fishing-game-info-icon-box {
+    margin-right: 10px;
+    margin-bottom: 60px;
+}
+
+.fishing-game-info-icon {
+    font-size: 20px;
+    cursor: pointer;
+    text-shadow: 0 0 4px rgba(255, 238, 181, 0.8), 0 0 5px rgba(38, 38, 38, 0.766), 0 0 2px rgb(0, 75, 11);
+    color: #ffeeb5;
+}
+
+.game-info-popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.popup-content {
+    background: #a2e0ff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    color: #333;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.95);
+    border: 2px solid rgb(255, 225, 0);
+}
+
+.popup-content h2 {
+    margin-top: 0;
+}
+
+.control-button {
+    background-color: #4A9DC7;
+    color: #ffeeb5;
+    padding: 8px;
+    width: 60px;
+    height: 60px;
+    font-size: 25px;
+    border-radius: 5px;
+    border: 2px solid rgb(255, 225, 0);
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 1px 3px #ffeeb5, inset 0 2px 4px rgba(133, 190, 255, 0.227), inset 0 -2px 1px #000000ba;
+    margin: 5px 20px;
+    text-shadow: 0 0 4px rgba(255, 238, 181, 0.8), 0 0 5px rgba(38, 38, 38, 0.766), 0 0 2px rgb(0, 75, 11);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.control-button:hover {
+    background-color: #ffc014ed;
+    color: #00f2ff;
+    border: 2px solid rgb(255, 225, 0);
+    transform: translateY(-2px);
+}

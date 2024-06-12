@@ -1,0 +1,86 @@
+/* --------------------------------- */
+/* --------------------------------- */
+/* --------------------------------- */
+/* --------------------------------- */
+/* --------------------------------- */
+/* ----------Fruit-Ninja------------ */
+
+.fruit-ninja-module {
+    position: relative;
+    background-color: #68cbfc80;
+    border: 1px solid #68cbfc80;
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 500px;
+    min-width: 500px;
+    height: 750px;
+    margin: 0 auto;
+    box-shadow: 0 3px 8px #ffeeb5f4, inset 0 2px 4px rgba(133, 190, 255, 0.227), inset 0 -3px 2px #000000ba;
+    text-shadow: 0 0 4px rgba(255, 238, 181, 0.8), 0 0 5px rgba(38, 38, 38, 0.766), 0 0 2px rgb(0, 75, 11);
+    transition: background 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffeeb5f4;
+  }
+  
+  .fruit-ninja-game {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border: 2px solid #333;
+    background-color: #b0e0e6;
+    margin-bottom: 20px;
+  }
+  
+  .fruit-ninja-basket {
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    height: 50px;
+    background-color: green;
+    border-radius: 10px;
+  }
+  
+  .fruit-ninja-track {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 55px;
+    background-color: #ffa500;
+    z-index: 1;
+  }
+  
+  .fruit-ninja-fruit {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: white;
+  }
+  
+  .fruit-ninja-info {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .flash-points {
+    position: absolute;
+    font-size: 150px;
+    color: rgba(255, 255, 255, 0.5);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: opacity 0.5s;
+  }
+  
+
+  /* --------------------------------- */
+

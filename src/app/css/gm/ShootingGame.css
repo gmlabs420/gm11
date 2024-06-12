@@ -1,0 +1,233 @@
+.shooting-game-module {
+  position: relative; /* Ensures the level message screen and game over screen are positioned relative to this container */
+  background-color: #68cbfc80;
+  border: 5px solid #68cbfc80;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 500px;
+  min-width: 500px;
+  height: 750px;
+  margin: 0 auto;
+  box-shadow: 0 3px 8px #ffeeb5f4, inset 0 2px 4px rgba(133, 190, 255, 0.227), inset 0 -3px 2px #000000ba;
+  text-shadow: 0 0 4px rgba(255, 238, 181, 0.8), 0 0 5px rgba(38, 38, 38, 0.766), 0 0 2px rgb(0, 75, 11);
+  transition: background, border 2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffeeb5f4;
+}
+
+.shooting-game-module:hover {
+  background-color: #68f7fc6e;
+  border: 5px solid #5bea62ab; /* White border for visibility */
+
+}
+
+.shooting-game {
+  text-align: center;
+}
+
+.shooting-game canvas {
+  border: 2px solid rgb(255, 225, 0); /* border for visibility */
+  margin-bottom: 10px;
+  margin-top: 10px;
+  height: 400px;
+  width: 400px;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.809);
+}
+
+.shooting-game {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.shooting-game-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.shooting-game .status-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.status-box {
+  background: #a2e0ff80;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.809);
+  text-align: center;
+  border: 2px solid rgb(255, 225, 0); /* border for visibility */
+}
+
+.status-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.level-message-screen,
+.game-over-screen {
+  position: absolute; /* Positions the element absolutely relative to .shooting-game-module */
+  top: 0; /* Positions the top of the element at the top of .shooting-game-module */
+  left: 0; /* Positions the left of the element at the left of .shooting-game-module */
+  width: 100%; /* Sets the width to 100% of .shooting-game-module */
+  height: 100%; /* Sets the height to 100% of .shooting-game-module */
+  background: rgba(0, 0, 0, 0.8); /* Sets a semi-transparent black background */
+  display: flex; /* Uses flexbox for layout */
+  flex-direction: column; /* Arranges children in a column */
+  align-items: center; /* Centers children horizontally */
+  justify-content: center; /* Centers children vertically */
+  z-index: 10; /* Ensures it is on top of other content */
+}
+
+.level-message {
+  font-size: 48px;
+  color: #ffeeb5;
+  margin-top: 100px;
+}
+
+.countdown {
+  font-size: 48px;
+  margin-top: 20px;
+}
+
+.level-score {
+  font-size: 24px;
+  color: #ffeeb5;
+  margin-top: 20px;
+}
+
+.win-message {
+  font-size: 32px;
+  color: #ffeeb5;
+}
+
+.game-over-message {
+  font-size: 24px;
+  color: #ff0000;
+}
+
+.shooting-game-controls button {
+  background-color: #4A9DC7;
+  color: #ffeeb5;
+  padding: 8px 30px;
+  font-size: 25px;
+  border-radius: 5px;
+  border: 2px solid rgb(255, 225, 0); /* border for visibility */
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 
+    0 1px 3px #ffeeb5,
+    inset 0 2px 4px rgba(133, 190, 255, 0.227),
+    inset 0 -2px 1px #000000ba; 
+  margin-top: 0px;
+  margin-bottom: 10px;
+  margin-left: 10px; 
+  margin-right: 10px;
+  text-shadow: 
+    0 0 4px rgba(255, 238, 181, 0.8), /* Glowing effect */
+    0 0 5px rgba(38, 38, 38, 0.766), /* Larger glow for softer edge */
+    0 0 2px rgb(0, 75, 11); /* Even larger glow for extended soft edge */
+}
+
+
+.shooting-game-controls button:hover {
+  background-color: #ffc014ed;
+  color: #00f2ff;
+  border: 2px solid rgb(255, 225, 0); /* border for visibility */
+  transform: translateY(-2px);
+}
+
+.runner-game-info-icon-box {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 40px;
+  margin-bottom: 60px;
+}
+
+.shooting-game-top-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+}
+
+.shooting-game-header-box {
+  padding-bottom: 10px;
+  height: 80px;
+}
+
+.shooting-game-header-box h1 {
+  padding-left: 75px;
+  padding-top: 3px;
+  margin-bottom: 10px;
+}
+
+.shooting-game-info-icon {
+  font-size: 20px;
+  cursor: pointer;
+  text-shadow: 0 0 4px rgba(255, 238, 181, 0.8), 0 0 5px rgba(38, 38, 38, 0.766), 0 0 2px rgb(0, 75, 11);
+  color: #ffeeb560;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 0px;
+  margin-top: 10px;
+  margin-right: 2px;
+}
+
+.shooting-game-info-icon:hover {
+  color: #ffeeb5;
+}
+
+.shooting-game-info-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.shooting-game-info-screen.show {
+  display: flex;
+}
+
+.shooting-game-info-content {
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+  background: #a2e0ff;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.95);
+  color: #333;
+  width: 375px;
+  height: 375px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  padding: 10px;
+  border: 2px solid rgb(255, 225, 0);
+}
+
+.shooting-game-info-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  cursor: pointer;
+  text-shadow: 0 0 4px rgba(255, 238, 181, 0.8), 0 0 5px rgba(38, 38, 38, 0.766), 0 0 2px rgb(0, 75, 11);
+  color: #ffeeb5;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+

@@ -1,0 +1,489 @@
+/* ------QUANTITY-PRICE-MODULE------ */
+
+.quantity-price-module {
+    background-color: #68cbfc80;
+    border: 5px solid #68cbfc80; /* border for visibility */
+    padding: 0px;
+    padding-top: 15px;
+    border-radius: 5px;
+    width: 100%; 
+    height: 750px; /* Set the height in pixels */
+    align-items: center;
+    color: #ffeeb5f4;
+    max-width: 500px;
+    min-width: 500px; /* Set the minimum width in pixels */
+    margin: 0px auto;
+    box-shadow: 
+        0 3px 8px #ffeeb5f4,
+        inset 0 2px 4px rgba(133, 190, 255, 0.227),
+        inset 0 -3px 2px #000000ba; 
+    text-shadow: 
+        0 0 2px rgba(255, 238, 181, 0.8), /* Glowing effect */
+        0 0 3px rgba(38, 38, 38, 0.766); /* Larger glow for softer edge */
+    transition: background, border 0.9s ease; /* Add transition for smooth background change */
+}
+
+/* --------------------------------- */
+
+.quantity-price-module:hover {
+    background-color: #68f7fc6e;
+    border: 5px solid #5bea62ab; /* White border for visibility */
+
+}
+
+/* --------------------------------- */
+
+.quantity-price-module {
+    position: relative;
+}
+
+/* --------------------------------- */
+
+.mint-options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+/* --------------------------------- */
+
+.quantity-adjust {
+    position: relative;
+    background-color: rgb(255, 225, 0);
+    color: #ffeeb5;
+    padding: 0px 25px;
+    margin-left: 2px; 
+    margin-right: 2px;
+    border: 2px solid rgb(255, 225, 0); /* border for visibility */
+    font-size: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 
+    0 1px 3px #ffeeb5,
+    inset 0 2px 4px rgba(133, 190, 255, 0.227),
+    inset 0 -2px 1px #000000ba; 
+    text-shadow: 
+        0 0 2px rgba(255, 238, 181, 0.8), /* Glowing effect */
+        0 0 3px rgba(38, 38, 38, 0.766); /* Larger glow for softer edge */
+}
+
+/* --------------------------------- */
+
+.quantity-adjust:hover {
+    background-color: #ffc014ed;
+    color: #00f2ff;
+    border: 2px solid #c4ff72ab; /* border for visibility */
+    transform: translateY(-2px);
+}
+
+/* --------------------------------- */
+
+.quantity-adjust:active {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+    transform: translateY(1px);
+    border-radius: 5px; 
+}
+
+/* --------------------------------- */
+
+.nft-quantity-input {
+    background-color: #015D82;
+    border-radius: 5px;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.809);
+    padding: 5px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 8px; 
+    margin-right: 8px;
+    color: #333;
+    font-size: 2em;
+    width: 40%; 
+    align-items: center;
+    color: #ffeeb5f4;
+    text-shadow: 
+    0 0 2px rgba(255, 238, 181, 0.8), /* Glowing effect */
+    0 0 3px rgba(38, 38, 38, 0.766); /* Larger glow for softer edge */
+    border: 5px solid rgb(255, 225, 0); /* border for visibility */
+}
+
+/* --------------------------------- */
+
+.nft-quantity-input::-webkit-outer-spin-button,
+.nft-quantity-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* --------------------------------- */
+
+.nft-quantity-input[type=number] {
+    -moz-appearance: textfield; /* Specific to Firefox */
+    appearance: textfield; /* Standard property for other browsers */
+    text-align: center;
+}
+
+/* --------------------------------- */
+
+.quantity hr {
+    border: none; /* Remove any default border */
+    height: 4px; /* Increase height for better visibility */
+    background: #ffeeb5f4; /* Use a bright color for contrast */
+    margin: 5px 0; /* Increase vertical spacing */
+    opacity: 0.9; /* Ensure the line is not transparent */
+    width: 80%; /* Set width to make it more noticeable */
+}
+
+/* --------------------------------- */
+
+.quantity-container {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto; /* Center align the container */
+    padding: 5px; /* Add padding to the container */
+    border: 2px solid #68cbfc80; /* Add border for visibility */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    box-shadow: 
+        0 3px 8px #ffeeb5f4,
+        inset 0 2px 4px rgba(133, 190, 255, 0.227),
+        inset 0 -3px 2px #000000ba; 
+    background-color: #68cbfc32; /* Add background color */
+    align-items: center;
+    gap: 10px; /* Adjust spacing between buttons as needed */
+}
+
+/* --------------------------------- */
+/* --------------------------------- */
+/* --------------------------------- */
+/* ------------FIREWORK------------- */
+
+.gm-circle {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px; /* Start smaller */
+    height: 20px; /* Start smaller */
+    background-color: rgb(255, 225, 0); /* Match button background */
+    color: #ffeeb5; /* Match button text color */
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 12px; /* Start smaller */
+    text-shadow: 
+    0 0 2px rgba(255, 238, 181, 0.8), /* Glowing effect */
+    0 0 3px rgba(38, 38, 38, 0.766); /* Larger glow for softer edge */
+    animation: gmFirework 0.7s ease-out forwards; /* Faster rise */
+    pointer-events: none; /* Prevent interaction with the circles */
+    border: 2px solid rgb(255, 225, 0)!important; /* border for visibility */
+}
+
+/* --------------------------------- */
+
+@keyframes gmFirework {
+    0% {
+        transform: scale(0.5) translateY(0); /* Start smaller */
+        opacity: 1;
+    }
+    80% {
+        transform: scale(2.5) translateY(-80px); /* Grow larger */
+        opacity: 1;
+    }
+    100% {
+        transform: scale(3.5) translateY(-200px); /* Grow even larger */
+        opacity: 0;
+    }
+}
+
+/* --------------------------------- */
+
+.gm-circle-burst {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(255, 225, 0); /* Match button background */
+    color: #ffeeb5; /* Match button text color */
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 8px;
+    animation: gmBurst 1s ease-out forwards; /* Slower burst */
+    pointer-events: none; /* Prevent interaction with the circles */
+    border: 1px solid rgb(255, 225, 0); /* Match button border */
+}
+
+/* --------------------------------- */
+
+@keyframes gmBurst {
+    0% {
+        transform: scale(1) translate(0, 0);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5) translate(0,-50px);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1) translate(0, 200px);
+        opacity: 0;
+    }
+}
+
+/* --------------------------------- */
+/* --------------------------------- */
+/* --------------------------------- */
+/* --------------------------------- */
+/* --------------------------------- */
+/* ---------MINT-GM-BUTTON---------- */
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 
+            0 0 20px 10px rgba(0, 151, 211, 0.7), 
+            0 4px 6px rgba(135, 135, 135, 0.425), 
+            0 0 8px #74d378,
+            inset 0 5px 5px #ffeeb5, 
+            inset 0 -2px 6px rgb(0, 0, 0);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 
+            0 0 25px 12px rgba(0, 151, 211, 0.85), 
+            0 5px 7px rgba(135, 135, 135, 0.5), 
+            0 0 10px #74d378,
+            inset 0 6px 6px #ffeeb5, 
+            inset 0 -3px 7px rgb(0, 0, 0);
+    }
+}
+
+/* --------------------------------- */
+
+#mintGmButton {
+    color: #ffeeb5;    
+    font-size: 180px;
+    border-radius: 50%;
+    width: 260px;
+    height: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    background: linear-gradient(to bottom, #fff5cf, #ffd700 50%, rgb(255, 165, 0)); /* Glossy effect */
+    position: relative;
+    z-index: 1;
+    transition: box-shadow 0.8s ease, transform 0.8s ease;
+    text-shadow: 
+        0 0 2px rgba(255, 238, 181, 0.8), /* Glowing effect */
+        0 0 2px rgba(38, 38, 38, 0.942), /* Larger glow for softer edge */
+        1px 1px 2px rgba(0, 0, 0, 0.6), /* Inset shadow for sunken effect */
+        -2px -2px 3px rgba(9, 129, 184, 0.297); /* Highlight for raised edge */
+    
+    
+    border: 2px solid #5bea62ab; /* border for visibility */
+    box-shadow: 
+    0 4px 6px rgb(255, 238, 181), 
+    inset 0 5px 5px #ffeeb5, 
+    inset 0 -2px 6px rgb(0, 0, 0); 
+    transition: background 0.8s ease; /* Add transition for smooth background change */
+    animation: pulse 2.5s infinite;
+}
+
+/* --------------------------------- */
+
+#mintGmButton::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    z-index: -1;
+    background: linear-gradient(to bottom, #fff5cf, #ffd700 50%, rgba(0, 255, 94, 0.467)); /* Glossy effect */
+    border-radius: 50%;
+    transition: box-shadow 0.5s ease, transform 0.8s ease;
+    box-shadow: 
+        0 4px 6px rgb(255, 238, 181), 
+        inset 0 5px 5px #ffeeb5, 
+        inset 0 -2px 6px rgb(0, 0, 0); 
+    border: 2px solid rgb(255, 238, 181); 
+}
+
+/* --------------------------------- */
+
+#mintGmButton:hover::before {
+    transform: scale(1.0);
+    border: 2px solid #00ff0d9e; /* White border for visibility */
+}
+
+/* --------------------------------- */
+
+#mintGmButton:active::before {
+    transform: scale(1.0); 
+    transition: box-shadow 0.5s ease, transform 0.5s ease;
+    box-shadow: 
+        0 4px 6px rgba(135, 135, 135, 0.425), 
+        inset 0 5px 5px #ffeeb5, 
+        inset 0 -2px 6px rgb(0, 0, 0); 
+    border: 2px solid #5bea629f; /* White border for visibility */
+}
+
+/* --------------------------------- */
+
+.mintGmButton:hover {
+    transform: translateY(-5px);
+    transition: box-shadow 0.8s ease, transform 0.8s ease;
+    border: 2px solid #74d378; /* White border for visibility */
+    box-shadow: 
+        0 0 30px 15px rgba(0, 151, 211, 1), /* Stronger outer glow on hover */
+        0 4px 6px rgba(135, 135, 135, 0.425), 
+        0 0 8px #74d378,
+        inset 0 5px 5px #ffeeb5, 
+        inset 0 -2px 6px rgb(0, 0, 0);
+}
+
+/* --------------------------------- */
+
+.mintGmButton:active {
+    box-shadow: 
+        0 0 30px 15px rgba(0, 151, 211, 1), /* Maintain glow on active */
+        0 4px 6px rgba(135, 135, 135, 0.425), 
+        0 0 8px #74d378,
+        inset 0 5px 5px #ffeeb5, 
+        inset 0 -2px 6px rgb(0, 0, 0);
+    transform: translateY(1px);
+    animation: none; /* Stop pulsing animation when active */
+}
+
+/* --------------------------------- */
+
+.mintGmButton:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+    border: 2px solid #74d378; /* White border for visibility */
+    animation: none; /* Stop pulsing animation when disabled */
+}
+
+/* --------------------------------- */
+
+.quantity-price-info-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* --------------------------------- */
+
+.quantity-price-info-screen.show {
+    display: flex;
+}
+
+/* --------------------------------- */
+  
+.quantity-price-info-content {
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    background: #a2e0ff;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.95);
+    color: #333;
+    width: 375px;
+    height: 375px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    padding: 10px;
+    border: 2px solid rgb(255, 225, 0);
+}
+
+/* --------------------------------- */
+  
+.quantity-price-info-content h2 {
+    margin-top: 0px;
+}
+
+/* --------------------------------- */
+  
+.quantity-price-info-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 40px;
+    cursor: pointer;
+    text-shadow: 
+    0 0 2px rgba(255, 238, 181, 0.8), /* Glowing effect */
+    0 0 3px rgba(38, 38, 38, 0.766); /* Larger glow for softer edge */    color: #ffeeb5;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ------------------------ */
+
+.quantity-price-top-container {
+    position: relative;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+
+}
+
+/* --------------------------------- */
+
+.quantity-price-header-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+/* --------------------------------- */
+
+.quantity-price-header-box h1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    margin-left: 190px;
+}
+
+/* --------------------------------- */
+
+.quantity-price-info-icon {
+    font-size: 20px;
+    cursor: pointer;
+    text-shadow: 
+    0 0 2px rgba(255, 238, 181, 0.8), /* Glowing effect */
+    0 0 3px rgba(38, 38, 38, 0.766); /* Larger glow for softer edge */    color: #ffeeb560;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    padding: 10px;
+    padding-right: 15px;
+    margin-bottom: 10px;
+}
+
+/* --------------------------------- */
+
+.quantity-price-info-icon:hover {
+    color: #ffeeb5;
+}
+
+/* --------------------------------- */
+
+.quantity-price-info-icon-box {
+    margin-bottom: 30px;
+    margin-left: 6px;
+}

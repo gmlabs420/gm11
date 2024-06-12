@@ -1,0 +1,288 @@
+/* --------------------------------------------------------------------------------------------------------------------- */
+/* --------------------------------- */
+/* --------------------------------- */
+/* --------------------------------- */
+/* --------------------------------- */
+/* --------------------------------- */
+/* ----------LEADERBOARD------------ */
+
+
+.gm-leaderboard-section {
+    background-color: #68cbfc80;
+    border: 5px solid #68cbfc80;
+    padding: 0px;
+    padding-top: 15px;
+    border-radius: 5px;
+    width: 100%; 
+    height: 750px; /* Set the height in pixels */
+    align-items: center;
+    color: #ffeeb5f4;
+    max-width: 500px;
+    min-width: 500px; /* Set the minimum width in pixels */
+    margin: 0px auto;
+    box-shadow: 
+        0 3px 8px #ffeeb5f4,
+        inset 0 2px 4px rgba(133, 190, 255, 0.227),
+        inset 0 -3px 2px #000000ba; 
+    text-shadow: 
+        0 0 4px rgba(255, 238, 181, 0.8), /* Glowing effect */
+        0 0 5px rgba(38, 38, 38, 0.766), /* Larger glow for softer edge */
+        0 0 2px rgb(0, 75, 11); /* Even larger glow for extended soft edge */
+    transition: background, border 2s ease; /* Add transition for smooth background change */
+}
+
+.gm-leaderboard-section:hover {
+    background-color: #68f7fc6e;
+    border: 5px solid #5bea62ab; /* White border for visibility */
+
+
+}
+
+/* --------------------------------- */
+
+.gm-leaderboard-section h1 {
+    margin-bottom: 5px;
+}
+
+/* --------------------------------- */
+
+.leaderboard-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 5px;
+    width: 100%; /* Adjusted to 100% */
+    align-items: center;
+    
+}
+
+/* --------------------------------- */
+
+.leaderboard-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Adjusted to 90% */
+    background-color: #4A9DC7;
+    color: #ffeeb5;
+    border: 2px solid rgb(255, 225, 0); /* border for visibility */
+    border-radius: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 
+    0 1px 3px #ffeeb5,
+    inset 0 2px 4px rgba(133, 190, 255, 0.227),
+    inset 0 -2px 1px #000000ba; 
+    text-shadow: 
+    0 0 4px rgba(255, 238, 181, 0.8), /* Glowing effect */
+    0 0 5px rgba(38, 38, 38, 0.766), /* Larger glow for softer edge */
+    0 0 2px rgb(0, 75, 11); /* Even larger glow for extended soft edge */
+}
+
+
+/* --------------------------------- */
+
+.leaderboard-card:hover {
+    background-color: #ffc014ed;
+    color: #00f2ff;
+    border: 2px solid #5bea62; /* White border for visibility */
+    transform: translateY(-2px);
+}
+
+/* --------------------------------- */
+
+.leaderboard-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+/* --------------------------------- */
+
+.leaderboard-rank {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* --------------------------------- */
+
+.leaderboard-avatar img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 
+    0 2px 4px rgba(135, 135, 135, 0.425), 
+    inset 0 2px 2px #ffeeb5, 
+    inset 0 -1px 3px rgba(0, 0, 0, 0.232); 
+    border: 2px solid rgb(255, 225, 0);
+}
+
+/* --------------------------------- */
+
+.leaderboard-wallet {
+    font-size: 18px;
+    font-weight: bold;
+    flex: 1;
+}
+
+/* --------------------------------- */
+
+.leaderboard-mints {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* --------------------------------- */
+
+.progress-bar-container {
+    width: 390px; 
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    flex: 1;
+}
+
+/* --------------------------------- */
+
+.progress-bar {
+    height: 15px;
+    border-radius: 5px;
+    position: relative;
+}
+
+/* --------------------------------- */
+
+.progress-bar-text {
+    font-size: 14px;
+    color: #000;
+}
+
+/* --------------------------------- */
+
+.leaderboard-badge .badge {
+    display: inline-block;
+    background-color: #0015ff;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* --------------------------------- */
+
+
+/* Styling for the Font Awesome icon in the GmsLeaderboard */
+.gm-leaderboard-section .etherscan-icon {
+    font-size: 16px;
+    color: #242424; /* Green color for the icon */
+    margin-left: 5px; /* Space between the wallet address and the icon */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+/* --------------------------------- */
+
+.gm-leaderboard-section .etherscan-icon:hover {
+    color: #2f2f2f; /* Change color on hover */
+}
+
+/* --------------------------------------------------------------------------------------------------------------------- */
+/* --------------------------------- */
+/* --------------------------------- */
+/* --------------------------------- */
+/* --------------------------------- */
+/* --------------------------------- */
+/* ---------LEADERBOARD------------- */
+
+
+
+
+.leaderboard-top-container {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    margin-bottom: 40px;
+  }
+  
+  .leaderboard-header-box h1 {
+    margin-left: 190px; /* Adjust alignment as needed */
+    margin-top: 25px;
+  }
+  
+  .leaderboard-info-icon-box {
+    margin-right: 17px; /* Adjust alignment as needed */
+    margin-bottom: 31px;
+  }
+  
+  .leaderboard-info-icon {
+    font-size: 20px;
+    cursor: pointer;
+    text-shadow: 0 0 4px rgba(255, 238, 181, 0.8), 0 0 5px rgba(38, 38, 38, 0.766), 0 0 2px rgb(0, 75, 11);
+    color: #ffeeb560;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .leaderboard-info-icon:hover {
+    color: #ffeeb5;
+  }
+  
+  .leaderboard-info-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .leaderboard-info-screen.show {
+    display: flex;
+  }
+  
+  .leaderboard-info-content {
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    background: #a2e0ff;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.95);
+    color: #333;
+    width: 375px;
+    height: 375px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    padding: 10px;
+    border: 1px solid rgb(255, 225, 0);
+  }
+  
+  .leaderboard-info-content h2 {
+    margin-top: 0px;
+  }
+  
+  .leaderboard-info-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 40px;
+    cursor: pointer;
+    text-shadow: 0 0 4px rgba(255, 238, 181, 0.8), 0 0 5px rgba(38, 38, 38, 0.766), 0 0 2px rgb(0, 75, 11);
+    color: #ffeeb5;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  

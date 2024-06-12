@@ -1,0 +1,444 @@
+.breakfast-builder-container {
+  position: relative;
+  background-color: #68cbfc80;
+  border: 5px solid #68cbfc80;
+  padding-top: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 500px;
+  min-width: 500px;
+  height: 750px;
+  margin: 0 auto;
+  box-shadow: 0 3px 8px #ffeeb5f4, inset 0 2px 4px rgba(133, 190, 255, 0.227), inset 0 -3px 2px #000000ba;
+  text-shadow: 0 0 4px rgba(255, 238, 181, 0.8), 0 0 5px rgba(38, 38, 38, 0.766), 0 0 2px rgb(0, 75, 11);
+  transition: background, border 2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffeeb5f4;
+}
+
+.breakfast-builder-container:hover {
+  background-color: #68f7fc6e;
+  border: 5px solid #5bea62ab; /* White border for visibility */
+
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header-container h1 {
+  margin-left: 70px;
+}
+
+.calories-display {
+  margin-top: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.plate-container {
+  width: 280px;
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  border-radius: 50%;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2), inset 0 2px 4px rgba(0, 0, 0, 0.1), inset 0 -3px 2px rgba(255, 255, 255, 0.5);
+}
+
+.plate {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 1px 3px #ffeeb5, inset 0 2px 4px rgba(133, 190, 255, 0.227), inset 0 -2px 1px #000000ba;
+  overflow: hidden; /* Ensure items stay within the plate */
+}
+
+.food-items-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px;
+  overflow-y: auto;
+  max-height: 175px; /* Ensure it doesn't overflow the module */
+  width: 100%;
+  border: 2px solid rgb(255, 225, 0);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.809);
+}
+
+.food-item {
+  margin: 10px;
+  font-size: 40px;
+  cursor: grab;
+  text-align: center;
+}
+
+.item-details {
+  font-size: 12px;
+  color: #333;
+  text-align: center;
+}
+
+.food-name {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.calorie-count {
+  font-size: 12px;
+  color: #333;
+}
+
+.plate-reset-button {
+  background-color: #4A9DC7;
+  color: #ffeeb5;
+  padding: 8px;
+  width: 60px;
+  height: 60px;
+  font-size: 25px;
+  border-radius: 5px;
+  border: 2px solid rgb(255, 225, 0);
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 1px 3px #ffeeb5, inset 0 2px 4px rgba(133, 190, 255, 0.227), inset 0 -2px 1px #000000ba;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-shadow: 0 0 4px rgba(255, 238, 181, 0.8), 0 0 5px rgba(38, 38, 38, 0.766), 0 0 2px rgb(0, 75, 11);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style the scrollbar */
+.food-items-container::-webkit-scrollbar {
+  width: 20px;
+  border: 2px solid #4A9DC7; /* Same border as GM button */
+  border-radius: 5px;
+
+}
+
+.food-items-container::-webkit-scrollbar-track {
+  background: #157ea7;
+  border-radius: 5px;
+  -webkit-appearance: none; /* Remove default appearance */
+  appearance: none; /* Remove default appearance */
+  outline: none;
+  transition: background 0.2s;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.809);
+}
+
+.food-items-container::-webkit-scrollbar-thumb {
+  -webkit-appearance: none; /* Remove default appearance */
+  appearance: none; /* Remove default appearance */
+  width: 15px; /* Thumb size */
+  height: 45px; /* Thumb size */
+  border-radius: 5px;
+  background-color: rgb(255, 225, 0); /* Same yellow as GM button */
+  cursor: pointer;
+  box-shadow: 
+    0 2px 4px rgba(135, 135, 135, 0.425), 
+    inset 0 2px 2px #ffeeb5, 
+    inset 0 -1px 3px rgba(0, 0, 0, 0.386); 
+  border: 2px solid #4A9DC7; /* Same border as GM button */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Custom drag icon */
+.drag-icon {
+  position: absolute;
+  font-size: 40px;
+  z-index: 100;
+  opacity: 0.8;
+}
+
+.breakfast-title-container {
+  margin-bottom: 0px;
+}
+
+.info-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.info-screen.show {
+  display: flex;
+}
+
+.info-content {
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+  background: #a2e0ff;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.95);
+  color: #333;
+  width: 375px;
+  height: 375px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  padding: 10px;
+  border: 2px solid rgb(255, 225, 0);
+}
+
+.info-content h2 {
+  margin-top: 0px;
+}
+
+.info-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  cursor: pointer;
+  text-shadow: 0 0 4px rgba(255, 238, 181, 0.8), 0 0 5px rgba(38, 38, 38, 0.766), 0 0 2px rgb(0, 75, 11);
+  color: #ffeeb5;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mint-button {
+  background-color: #4A9DC7;
+  color: #ffeeb5;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 1px solid rgb(255, 225, 0);
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 1px 3px #ffeeb5, inset 0 2px 4px rgba(133, 190, 255, 0.227), inset 0 -2px 1px #000000ba;
+  text-shadow: 0 0 4px rgba(255, 238, 181, 0.8), 0 0 5px rgba(38, 38, 38, 0.766), 0 0 2px rgb(0, 75, 11);
+  margin-top: 20px;
+  margin-bottom: 10px;
+  width: 100px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mint-button:hover {
+  background-color: #ffc014ed;
+  color: #00f2ff;
+}
+
+.mint-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.mint-content {
+  position: relative;
+  background-color: #00527bf0;
+  border: 5px solid #ffeeb5f4;
+  padding: 10px;
+  border-radius: 5px;
+  width: 90%;
+  max-width: 500px;
+  min-width: 500px;
+  height: 750px;
+  margin: 0 auto;
+  box-shadow: 0 3px 8px #ffeeb5f4, inset 0 2px 4px rgba(133, 190, 255, 0.227), inset 0 -3px 2px #000000ba;
+  text-shadow: 0 0 4px rgba(255, 238, 181, 0.8), 0 0 5px rgba(38, 38, 38, 0.766), 0 0 2px rgb(0, 75, 11);
+  transition: background 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffeeb5f4;
+}
+
+.mint-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border: 2px solid #ffeeb5f4;
+  height: 400px;
+  width: 400px;
+}
+
+.mint-plate-background {
+  background-color: white; /* Background color of the plate */
+  border-radius: 50%;
+  width: 375px; /* Adjust size as needed */
+  height: 375px; /* Adjust size as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mint-image {
+  max-width: 90%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px #ffeeb5, inset 0 2px 4px rgba(133, 190, 255, 0.227), inset 0 -2px 1px #000000ba;
+  overflow: hidden; /* Ensure items stay within the plate */
+  background-color: #ffffff;
+}
+
+.mint-plate {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 1px 3px #ffeeb5, inset 0 2px 4px rgba(133, 190, 255, 0.227), inset 0 -2px 1px #000000ba;
+  overflow: hidden; /* Ensure items stay within the plate */
+  background-color: #ffffff;
+}
+
+.plate-wrapper {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style for plate options */
+.plate-options {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.plate-option {
+  padding: 10px;
+  border-radius: 80px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.plate-option.selected {
+  transform: scale(1.1);
+}
+
+.plate-white {
+  background-color: #ffffff;
+}
+
+.plate-metallic {
+  background: linear-gradient(135deg, #e6e6e6, #cccccc);
+  background-size: cover;
+  background-position: center;
+}
+
+.plate-wooden {
+  background: url('https://www.transparenttextures.com/patterns/wood.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.plate-paper {
+  background: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/*------------------------*/
+/*------------------------*/
+/*------------------------*/
+/*------------------------*/
+
+.mint-metadata-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 5px;
+  padding-top: 0px;
+  overflow-y: auto;
+  max-height: 200px; /* Ensure it doesn't overflow the module */
+  width: 100%;
+  border: 1px solid rgb(255, 225, 0);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.809);
+}
+
+.mint-metadata-container::-webkit-scrollbar {
+  width: 20px;
+}
+
+.mint-metadata-container::-webkit-scrollbar-track {
+  background: #157ea7;
+  border-radius: 5px;
+  -webkit-appearance: none; /* Remove default appearance */
+  appearance: none; /* Remove default appearance */
+  outline: none;
+  transition: background 0.2s;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.809);
+}
+
+.mint-metadata-container::-webkit-scrollbar-thumb {
+  -webkit-appearance: none; /* Remove default appearance */
+  appearance: none; /* Remove default appearance */
+  width: 5px; /* Thumb size */
+  height: 5px; /* Thumb size */
+  border-radius: 5px;
+  background-color: rgb(255, 225, 0); /* Same yellow as GM button */
+  cursor: pointer;
+  box-shadow: 
+    0 2px 4px rgba(135, 135, 135, 0.425), 
+    inset 0 2px 2px #ffeeb5, 
+    inset 0 -1px 3px rgba(0, 0, 0, 0.386); 
+  border: 1px solid #4A9DC7; /* Same border as GM button */
+}
+
+.mint-metadata {
+  margin-top: 3px;
+  width: 100%;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.mint-metadata h3 {
+  margin-bottom: 5px;
+}
+
+.mint-metadata ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mint-metadata ul li {
+  margin-bottom: 5px;
+}

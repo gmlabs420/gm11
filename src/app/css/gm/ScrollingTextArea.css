@@ -1,0 +1,266 @@
+/* --------------------------------------------------------------------------------------------------------------------- */
+/* --------------------------------- */
+/* --------------------------------- */
+/* --------------------------------- */
+/* --------------------------------- */
+/* --------------------------------- */
+/* -----Scrolling-Text-Area--------- */
+.scrolling-text-area {
+  background-color: #68cbfc80;
+  border: 5px solid #68cbfc80;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 1520px;
+  min-width: 500px;
+  height: 375px;
+  box-shadow: 0 3px 8px #ffeeb5f4, inset 0 2px 4px rgba(133, 190, 255, 0.227), inset 0 -3px 2px #000000ba;
+  text-shadow: 0 0 4px rgba(255, 238, 181, 0.8), 0 0 5px rgba(38, 38, 38, 0.766), 0 0 2px rgb(0, 75, 11);
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #ffeeb5f4;
+  transition: background, border 0.9s ease; /* Add transition for smooth background change */
+
+
+}
+
+.scrolling-text-container {
+  background: #a2e0ff80;
+  border-radius: 5px;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.809);
+  padding: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+  display: flex; /* Add flex display */
+  justify-content: center; /* Center align horizontally */
+  color: #ffeeb5f4;
+  z-index: 1;
+  font-size: 1.5em;
+  width: 95%;
+  height: 100px; /* Set the height in pixels */
+  margin-left: auto;
+  margin-right: 50px;
+  transition: max-height 1s ease-out, padding 0.6s ease-out;
+  overflow: hidden;  /* Hide overflow content */
+  border: 2px solid rgb(255, 225, 0); /* border for visibility */
+}
+
+.scrolling-text-area:hover {
+  background-color: #68f7fc6e;
+  border: 5px solid #5bea62ab; /* White border for visibility */
+
+}
+
+.scrolling-text {
+  display: flex;
+  animation: scroll-text 20s linear infinite;
+  white-space: nowrap;
+}
+
+.scrolling-text span {
+  padding-right: 30px; /* Space between messages */
+}
+
+@keyframes scroll-text {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.message-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  width: 90%; /* Adjusted width for the message input */
+}
+
+.message-input input {
+  background: #a2e0ff80;
+  border-radius: 5px;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.809);
+  padding-left: 50px;
+  padding-right: 50px;
+  align-items: center;
+  display: flex; /* Add flex display */
+  justify-content: center; /* Center align horizontally */
+  color: #ffeeb5f4;
+  z-index: 1;
+  font-size: 1.5em;
+  width: 100%;
+  height: 50px; /* Set the height in pixels */
+  transition: max-height 1s ease-out, padding 0.6s ease-out;
+  overflow: hidden;  /* Hide overflow content */
+  border: 5px solid rgb(255, 225, 0); /* border for visibility */
+  text-align: center; /* Center align placeholder text */
+}
+
+.message-input button {
+  background-color: #00d58a00;
+  color: #ffeeb5;
+  padding: 8px 18px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 2px solid rgb(255, 225, 0); /* border for visibility */
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 
+    0 1px 3px #ffeeb5,
+    inset 0 2px 4px rgba(133, 190, 255, 0.227),
+    inset 0 -2px 1px #000000ba; 
+  margin-left: 10px; 
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-shadow: 
+    0 0 4px rgba(255, 238, 181, 0.8), /* Glowing effect */
+    0 0 5px rgba(38, 38, 38, 0.766), /* Larger glow for softer edge */
+    0 0 2px rgb(0, 75, 11); /* Even larger glow for extended soft edge */
+  width: 100px; /* Set fixed width */
+  text-align: center; /* Center text and spinner */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.message-input button:hover {
+  background-color: #ffc014ed;
+  color: #00f2ff;
+  border: 2px solid #c4ff72ab; /* border for visibility */
+  transform: translateY(-2px);
+}
+
+.message-input-button:active {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 5px; 
+  transform: translateY(1px);
+}
+
+.emoji-picker {
+  position: absolute;
+  bottom: 70px;
+  z-index: 10;
+}
+
+.scrolling-text-top-container {
+  position: relative;
+  width: 101%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0px;
+  margin-bottom: 20px;
+  padding-left: 5px;
+
+}
+
+.scrolling-text-header-box h1 {
+  margin-left: 640px; /* Adjust alignment as needed */
+}
+
+.scrolling-text-info-icon-box {
+  margin-left: 8px; /* Adjust alignment as needed */
+  margin-bottom: 62px;
+
+}
+
+.scrolling-text-info-icon {
+  margin-right: 3px;
+  font-size: 20px;
+  cursor: pointer;
+  text-shadow: 0 0 4px rgba(255, 238, 181, 0.8), 0 0 5px rgba(38, 38, 38, 0.766), 0 0 2px rgb(0, 75, 11);
+  color: #ffeeb560;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scrolling-text-info-icon:hover {
+  color: #ffeeb5;
+}
+
+.scrolling-text-info-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.scrolling-text-info-screen.show {
+  display: flex;
+}
+
+.scrolling-text-info-content {
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+  background: #a2e0ff;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.95);
+  color: #333;
+  width: 375px;
+  height: 375px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  padding: 10px;
+  border: 2px solid rgb(255, 225, 0);
+}
+
+.scrolling-text-info-content h2 {
+  margin-top: 0px;
+}
+
+.scrolling-text-info-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 40px;
+  cursor: pointer;
+  text-shadow: 0 0 4px rgba(255, 238, 181, 0.8), 0 0 5px rgba(38, 38, 38, 0.766), 0 0 2px rgb(0, 75, 11);
+  color: #ffeeb5;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (max-width: 1520px) {
+  .scrolling-text-header-box h1 {
+    text-align: center; /* Center the text */
+    width: 100%; /* Take the full width */
+    margin-left: 95px;
+
+   
+
+  }
+  .scrolling-text-info-icon-box {
+    position: relative; /* Ensure it stays in the top right corner */
+   
+    margin-bottom: 55px;
+    margin-right: 15px;
+
+
+  }
+
+  .scrolling-text-area {
+
+    width: 500px;
+  }
+
+  .scrolling-text-top-container {
+
+    width: 110%;
+  }
+
+}

@@ -1,0 +1,37 @@
+@import url('./header.css');
+@import url('./index.css');
+@import url('./index2.css');
+@import url('./footer.css');
+@import url('./style.css');
+
+
+
+/* Components styles */
+@import url('./gm/AboutAccordion.css');
+@import url('./gm/AboutAccordion2.css');
+@import url('./gm/AboutAccordion4.css');
+@import url('./gm/AboutAccordion5.css');
+@import url('./gm/AboutAccordion6.css');
+@import url('./gm/AIGMImage.css');
+@import url('./gm/AIGMMachine.css');
+@import url('./gm/AttestationModule.css');
+@import url('./gm/BreakfastBuilder.css');
+@import url('./gm/CryptoPriceModule.css');
+@import url('./gm/DropdownMenu.css');
+@import url('./gm/FruitNinja.css');
+@import url('./gm/GmCalendar.css');
+@import url('./gm/GmFishing.css');
+@import url('./gm/GmsDrawingModule.css');
+@import url('./gm/GmSendStation.css');
+@import url('./gm/GmsGrowModule.css');
+@import url('./gm/GmsLeaderboard.css');
+@import url('./gm/GmsMinted.css');
+@import url('./gm/GmSmushGame.css');
+@import url('./gm/GmsRedeem.css');
+@import url('./gm/MemoryGame.css');
+@import url('./gm/QuantityPriceModule.css');
+@import url('./gm/RunnerGame.css');
+@import url('./gm/ScrollingTextArea.css');
+@import url('./gm/ShareModal.css');
+@import url('./gm/ShootingGame.css');
+@import url('./gm/SunriseSudoku.css');

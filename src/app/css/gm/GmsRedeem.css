@@ -1,0 +1,239 @@
+/* ----------GMS-REDEEM---------- */
+
+.burn-redeem {
+    background-color: #68cbfc80;
+    border: 5px solid #68cbfc80; /* border for visibility */
+    padding: 0px;
+    padding-top: 15px;
+    padding-right: 25px;
+    padding-left: 25px;
+    border-radius: 5px;
+    width: 100%; 
+    height: 750px; /* Set the height in pixels */
+    align-items: center;
+    color: #ffeeb5f4;
+    max-width: 500px;
+    min-width: 500px; 
+    margin: 0px auto;
+    box-shadow: 
+        0 3px 8px #ffeeb5f4,
+        inset 0 2px 4px rgba(133, 190, 255, 0.227),
+        inset 0 -3px 2px #000000ba; 
+    text-shadow: 
+        0 0 4px rgba(255, 238, 181, 0.8), /* Glowing effect */
+        0 0 5px rgba(38, 38, 38, 0.766), /* Larger glow for softer edge */
+        0 0 2px rgb(0, 75, 11); /* Even larger glow for extended soft edge */
+    transition: background, border 2s ease; /* Add transition for smooth background change */
+    display: flex;
+    flex-direction: column;
+}
+
+.burn-redeem:hover {
+    background-color: #68f7fc6e;
+    border: 5px solid #5bea62ab; /* White border for visibility */
+
+}
+
+.burn-redeem-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 5px;
+    gap: 10px; 
+}
+
+.burn-redeem-box {
+    width: 100%;
+    max-width: 450px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 3px solid #68cbfc80; /* Add border for visibility */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    box-shadow: 
+        0 3px 8px #ffeeb5f4,
+        inset 0 2px 4px rgba(133, 190, 255, 0.227),
+        inset 0 -3px 2px #000000ba; 
+    background-color: #68cbfc32; /* Add background color */
+    align-items: center;
+    gap: 10px; /* Adjust spacing between buttons as needed */
+}
+
+.exchange-burn-redeem-box {
+    width: 100%;
+    height: 473px;
+    max-width: 450px;
+    min-width: 450px;
+    margin-top: 0px;
+    margin-bottom: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 3px solid #68cbfc80; /* Add border for visibility */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    box-shadow: 
+        0 3px 8px #ffeeb5f4,
+        inset 0 2px 4px rgba(133, 190, 255, 0.227),
+        inset 0 -3px 2px #000000ba; 
+    background-color: #68cbfc32; /* Add background color */
+    align-items: center;
+    gap: 10px; /* Adjust spacing between buttons as needed */
+}
+
+.burn-redeem hr {
+    border: none;
+    height: 4px;
+    background: #ffeeb5f4;
+    margin: 5px 0;
+    opacity: 0.9;
+    width: 80%; 
+}
+
+.burn-redeem h3 {
+    margin: 5px 0;
+    text-align: center; 
+}
+
+.burn-mint-options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.burn-button-container, .redeem-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.expected-tokens {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.burn-quantity-input {
+    background-color: #015D82;
+    border-radius: 5px;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.809);
+    padding: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 8px; 
+    margin-right: 8px;
+    color: #333;
+    font-size: 2em;
+    width: 40%; 
+    align-items: center;
+    text-align: center;
+    color: #ffeeb5f4;
+    text-shadow: 
+        0 0 8px rgba(255, 238, 181, 0.729), /* Glowing effect */
+        0 0 6px rgba(9, 56, 0, 0.528), /* Larger glow for softer edge */
+        0 0 4px rgba(0, 75, 11, 0.531); /* Even larger glow for extended soft edge */
+    border: 5px solid rgb(255, 225, 0); /* border for visibility */
+}
+
+/* ---------GMS-REDEEM INFO--------- */
+
+.burn-redeem-info-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.burn-redeem-info-screen.show {
+    display: flex;
+}
+  
+.burn-redeem-info-content {
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    background: #a2e0ff;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.95);
+    color: #333;
+    width: 375px;
+    height: 375px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    padding: 10px;
+    border: 3px solid rgb(255, 225, 0);
+}
+  
+.burn-redeem-info-content h2 {
+    margin-top: 0px;
+}
+  
+.burn-redeem-info-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 40px;
+    cursor: pointer;
+    text-shadow: 
+        0 0 2px rgba(255, 238, 181, 0.8), /* Glowing effect */
+        0 0 3px rgba(38, 38, 38, 0.766); /* Larger glow for softer edge */
+    color: #ffeeb5;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.burn-redeem-top-container {
+    position: relative;
+    align-items: center;
+    width: 470px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    margin-bottom: 40px;
+}
+
+.burn-redeem-header-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.burn-redeem-header-box h1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    margin-left: 190px;
+    margin-right: 5px;
+}
+
+.burn-redeem-info-icon {
+    font-size: 20px;
+    cursor: pointer;
+    text-shadow: 
+        0 0 2px rgba(255, 238, 181, 0.8), /* Glowing effect */
+        0 0 3px rgba(38, 38, 38, 0.766); /* Larger glow for softer edge */
+    color: #ffeeb560;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    padding-left: 5px;
+    margin-bottom: 10px;
+}
+
+.burn-redeem-info-icon:hover {
+    color: #ffeeb5;
+}
+
+.burn-redeem-info-icon-box {
+    margin-bottom: 30px;
+    margin-left: 10px;
+
+}

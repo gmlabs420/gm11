@@ -1,0 +1,166 @@
+/* --------------------------------------------------------------------------------------------------------------------- */
+/* --------------------------------- */
+/* --------------------------------- */
+/* --------------------------------- */
+/* --------------------------------- */
+/* --------------------------------- */
+/* --------ACCORDION---------------- */
+
+.accordion-container {
+    background-color: #68cbfc80;
+    border: 5px solid #68cbfc80; /* border for visibility */
+    padding: 0px;
+    border-radius: 5px;
+    width: 100%; 
+    height: 750px; /* Set the height in pixels */
+    align-items: center;
+    color: #ffeeb5f4;
+    max-width: 1600px;
+    min-width: 500px; /* Set the minimum width in pixels */
+    margin: 0px auto;
+    box-shadow: 
+        0 3px 8px #ffeeb5f4,
+        inset 0 2px 4px rgba(133, 190, 255, 0.227),
+        inset 0 -3px 2px #000000ba; 
+    text-shadow: 
+        0 0 4px rgba(255, 238, 181, 0.8), /* Glowing effect */
+        0 0 5px rgba(38, 38, 38, 0.766), /* Larger glow for softer edge */
+        0 0 2px rgb(0, 75, 11); /* Even larger glow for extended soft edge */
+    transition: background 0.5s ease; /* Add transition for smooth background change */
+}
+
+/* --------------------------------- */
+
+.accordion-section {
+    margin-bottom: 10px;
+}
+
+/* --------------------------------- */
+
+.accordion {
+    position: relative;
+    background-color: #68cbfc80;
+    color: #ffeeb5;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 2em; /* Adjust font size for better visibility */
+    font-weight: bold;
+    border-radius: 14px;
+    cursor: pointer;
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.033),
+        inset 0 2px 4px rgba(241, 255, 133, 0.227),
+        inset 0 -2px 1px #000000ba;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center align items */
+    width: 1000px; /* Adjust width to fill more of the container */
+    box-shadow: 
+        0 1px 3px #d5ffb5,
+        inset 0 2px 4px rgba(133, 190, 255, 0.227),
+        inset 0 -3px 2px #000000ba; 
+    margin-top: 5px; /* Decrease margin for spacing */
+    margin-bottom: 5px; /* Decrease margin for spacing */
+    text-shadow: 
+    0 0 4px rgba(255, 238, 181, 0.8), /* Glowing effect */
+    0 0 5px rgba(38, 38, 38, 0.766), /* Larger glow for softer edge */
+    0 0 2px rgb(0, 75, 11); /* Even larger glow for extended soft edge */
+    border: 5px solid #68cbfc80;
+    transition: background, border 0.5s ease; /* Add transition for smooth background change */
+
+
+}
+
+/* --------------------------------- */
+
+.accordion:hover {
+    background-color: #ffc014ed;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.052), inset 0 1px 4px rgba(255, 255, 255, 0.204), inset 0 -2px 3px rgba(0, 0, 0, 0.468), 0 -1px 2px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+    border: 5px solid #5bea62ab; /* White border for visibility */
+
+}
+
+/* --------------------------------- */
+
+.accordion:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.099), inset 0 2px 4px rgba(255, 255, 255, 0.5), inset 0 -1px 5px rgba(0, 0, 0, 0.8);
+    transform: translateY(1px);
+    border: 5px solid #5bea62ab; /* White border for visibility */
+
+}
+
+/* --------------------------------- */
+
+/* Hover effect for chevron */
+.accordion .accordion i {
+    transition: color 0.3s ease;
+}
+
+/* --------------------------------- */
+
+.accordion .accordion:hover i {
+    color: #00f2ff; /* Change to your preferred hover color */
+}
+
+/* --------------------------------- */
+
+/* Active class styles for chevron */
+.accordion .accordion.active i {
+    color: #33ff00; /* Change to your preferred active color */
+    transform: scaleY(-1); /* Rotates the chevron */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* --------------------------------- */
+
+.panel {
+    transition: max-height 0.2s ease-out, padding 0.2s ease-out;
+    overflow: hidden;  /* Hide overflow content */
+    padding: 0 20px;  /* Adjust padding as necessary */
+    background-color: rgb(48, 50, 48);
+    border-radius: 5px;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.809);
+    margin-top: 10px;
+    margin-bottom: 15px;
+    color: #ffeeb5;
+    font-size: 1em;
+    width: 95%; 
+    margin-left: auto; 
+    margin-right: auto;
+    transition: max-height 1s ease-out, padding 1s ease-out;
+    overflow: hidden;  /* Hide overflow content */
+    padding: 0 20px;  /* Adjust padding as necessary */
+    border: 2px solid rgb(255, 225, 0); /* White border for visibility */
+    text-shadow: 
+    0 0 4px rgba(255, 238, 181, 0.8), /* Glowing effect */
+    0 0 5px rgba(38, 38, 38, 0.766), /* Larger glow for softer edge */
+    0 0 2px rgb(0, 75, 11); /* Even larger glow for extended soft edge */
+}
+
+/* --------------------------------- */
+
+.accordion.active + .panel {
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.641);
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 1.5em;
+    width: 90%; 
+    margin-left: auto; 
+    margin-right: auto;
+    transition: max-height 1s ease-out, visibility 0s, padding 1s;
+    visibility: visible; /* makes the content visible */
+    text-shadow: 
+        0 0 8px rgba(255, 238, 181, 0.388), /* Glowing effect */
+        0 0 6px rgba(9, 56, 0, 0.528), /* Larger glow for softer edge */
+        0 0 4px rgba(0, 75, 11, 0.531); /* Even larger glow for extended soft edge */
+        border: 2px solid rgb(255, 225, 0); /* White border for visibility */
+
+}
+

@@ -1,0 +1,1183 @@
+/* --------------------------------- */
+
+.top-nav2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    background-color: #5f3e8bd9;
+    background-image: linear-gradient( #cb3bff53, rgba(35, 8, 35, 0.819));
+    box-shadow: 
+        0 3px 8px rgba(153, 97, 206, 0.222), 
+        inset 0 2px 3px #ffeeb524, 
+        inset 0 -2px 2px rgba(255, 232, 193, 0.313); 
+    box-sizing: border-box;
+    margin-bottom: 0px;
+
+    border: 1px solid #ffebba7d; /* White border for visibility */
+    box-shadow: 
+    inset 0 -1px 3px rgba(255, 233, 162, 0.764), /* Inset shadow from the bottom */
+    0 8px 8px rgba(247, 104, 255, 0.286), /* Outer glow effect radiating upward */
+    0 8px 10px rgba(0, 255, 0, 0.235); /* Additional outer glow for enhanced visibility from the bottom */
+}
+
+/* --------------------------------- */
+
+.top-nav2 > .left,
+.top-nav2 > .center,
+.top-nav2 > .right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+/* --------------------------------- */
+
+.top-nav2 > .left {
+    justify-content: flex-start;
+}
+
+/* --------------------------------- */
+
+.top-nav2 > .right {
+    justify-content: flex-end;
+    display: flex; 
+}
+
+/* --------------------------------- */
+
+.dropdown2 {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* --------------------------------- */
+
+.dropdown2-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* --------------------------------- */
+
+.dropdown2-button svg, .dropdown2-button img {
+    width: 5%;
+    height: auto;
+}
+
+/* --------------------------------- */
+
+.dropdown2-content {
+    display: none;
+    position: absolute;
+    transform: translateX(-50%);
+    background-color: #cb8de42d;
+    min-width: 75px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 14px;
+    z-index: 100;
+    overflow: hidden;
+}
+
+/* --------------------------------- */
+
+.dropdown2-content a {
+    color: #e7feffbd;
+    padding: 10px 18px;
+    text-decoration: none;
+    display: flex;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-bottom: 1px solid #ffeeb5d4;
+}
+
+/* --------------------------------- */
+
+.dropdown2-content a svg {
+    margin-right: 8px;
+    width: 24px;
+    height: 24px;
+}
+
+/* --------------------------------- */
+
+.dropdown2-content a:hover {
+    background-color: #ffeeb527;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* --------------------------------- */
+
+.dropdown2:hover .dropdown2-content {
+    display: block;
+}
+
+/* --------------------------------- */
+
+.dropdown2-button svg, .dropdown2-button img {
+    width: 50px;
+    height: auto;
+}
+
+/* --------------------------------- */
+
+.dropdown2-content {
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* --------------------------------- */
+
+.connect-btn2 {
+    position: relative;
+    background: linear-gradient(circle, #c3ab221e 20%, rgba(13, 2, 23, 0.466), rgba(13, 2, 23, 0.466) 80%);
+    background-color: #b52cff0e;    
+    color: #ffeeb5;
+    border: none;
+    padding: 10px 20px;
+    
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #ffebba70; /* White border for visibility */
+    box-shadow: 
+        inset 0 1px 1px rgba(237, 207, 108, 0.505), /* Inset shadow */
+        0 0 8px rgba(247, 104, 255, 0.485), /* Outer glow effect */
+        0 0 10px rgba(0, 255, 0, 0.5); /* Additional outer glow for enhanced visibility */
+}
+
+/* --------------------------------- */
+
+.connect-btn2::before {
+    background-color: #4c59cf; 
+    border: none;
+    color: #ffeeb5;    
+    padding: 10px 20px; 
+    font-size: 16px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 4px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 -1px 0 rgba(0, 0, 0, 0.4), inset 0 2px 0 rgba(255, 255, 255, 0.7);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* --------------------------------- */
+
+.connect-btn2:hover::before {
+    opacity: 1;
+    transform: scale(1.01); 
+}
+
+/* --------------------------------- */
+
+.connect-btn2:active::before {
+    transform: scale(0.95); 
+}
+
+/* --------------------------------- */
+
+.connect-btn2:hover {
+    background-color: #7f00c360;    
+    color: #00f2ff;
+    box-shadow: 
+    0 1px 3px #ffeeb5,
+    inset 0 2px 4px rgba(133, 190, 255, 0.227),
+    inset 0 -2px 1px #000000ba;
+    transform: translateY(-2px); 
+}
+
+/* --------------------------------- */
+
+.connect-btn2:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), inset 0 2px 4px rgba(255, 255, 255, 0.5), inset 0 -1px 5px rgba(0, 0, 0, 0.514);
+    transform: translateY(4px); 
+}
+
+/* --------------------------------- */
+.connect-btn2.connected {
+    background-color: #FF5722; /* Red background to indicate connected state */
+    color: #FFFFFF;
+    box-shadow: 0 0 12px rgba(255, 87, 34, 0.7); /* Red glow for emphasis */
+    border: 2px solid #D84315; /* Darker red border */
+}
+
+/* --------------------------------- */
+
+.connect-btn2.connected:hover {
+    background-color: #D84315; /* Darker red on hover */
+}
+
+/* --------------------------------- */
+
+.connect-btn2.connected:active {
+    transform: translateY(1px); /* Small effect to mimic button press */
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* --------------------------------- */
+
+.toggle2-container {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+/* --------------------------------- */
+
+.toggle2-label {
+    cursor: pointer;
+    width: 50px;
+    height: 24px;
+    position: relative;
+    display: inline-block;
+    border-radius: 34px;
+    background-color: #0e0e0ea9;  /* Semi-transparent dark background */
+    border: 1px solid #ffebbac2; /* White border for visibility */
+    box-shadow: 
+        inset 0 1px 1px rgba(237, 207, 108, 0.505), /* Inset shadow */
+        0 0 8px rgba(247, 104, 255, 0.485), /* Outer glow effect */
+        0 0 10px rgba(0, 255, 0, 0.5); /* Additional outer glow for enhanced visibility */
+    transition: background-color 0.4s, box-shadow 0.4s; /* Smooth transition for hover effects */
+}
+
+/* --------------------------------- */
+
+.toggle2-label:hover {
+    background-color: #110012e0; /* Darker shade to indicate hover */
+}
+
+/* --------------------------------- */
+
+.toggle2-label::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px; 
+    border-radius: 50%;
+    background-color: #000000; 
+    background-image: linear-gradient(to bottom ,#0a010d, #1e0525, #421351, #622675, #ea49fcac);
+    transition: transform 0.4s;
+    box-shadow: 
+    0 2px 4px rgba(135, 135, 135, 0.041), 
+    inset 0 1px 3px #fff4cfdc, 
+    inset 0 -2px 6px rgba(0, 0, 0, 0.054);
+}
+
+/* --------------------------------- */
+
+.toggle2-label:hover::after {
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    background-color: #9d00c5b6; /* Change this to your preferred hover color for the circle */
+    background-image: linear-gradient(to bottom ,#0a010d89, #1e052599, #4213518d, #63267598, #ea49fc9e);
+    border-radius: 50%; 
+    transition: transform 0.4s;
+    box-shadow: 
+    0 2px 4px rgba(135, 135, 135, 0.041), 
+    inset 0 1px 3px rgba(255, 244, 207, 0.863), 
+    inset 0 -2px 6px rgba(0, 0, 0, 0.054);
+}
+/* --------------------------------- */
+
+#mintGmButton2 {
+    color: #ffeeb5;
+    font-size: 50vw;  /* Adjust font size relative to viewport width */
+    
+    border-radius: 50%;
+    width: 50vw;  /* Width relative to viewport width */
+    height: 50vw;  /* Height should match the width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+    cursor: pointer;
+    background-color: #69157e;
+    background-image: linear-gradient(to bottom, #0f0028de, rgba(0, 0, 0, 0.231));
+    position: relative;
+    z-index: 1;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    text-shadow: 0 0 8px rgba(255, 247, 221, 0.8);
+    border: 2px solid #fff9da46;
+    box-shadow: 
+    0 8px 16px rgba(18, 2, 27, 0.869),
+    inset 0 1px 4px #fff6daa6, 
+    inset 0 -4px 7px rgb(0, 0, 0);
+}
+
+#mintGmButton2::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -10px;
+    z-index: -1;
+    background-color: #b9b00028;
+    border-radius: 50%;
+    transition: opacity 0.8s, transform 0.3s;
+    opacity: 0.9;
+    transform: scale(1.05);
+    background-image: linear-gradient(to bottom, #0000009b, rgba(0, 0, 0, 0));
+    border: 3px solid #0080b7e1;
+    box-shadow:
+        inset 0 -2px 4px rgba(255, 233, 162, 0.409),
+        0 4px 4px rgba(247, 104, 255, 0.286),
+        0 4px 5px rgba(0, 255, 0, 0.235);
+}
+
+@media (min-width: 768px) {
+    #mintGmButton2, #mintGmButton2::before {
+        font-size: 170px;  /* Fixed font size for larger screens */
+        width: 250px;  /* Fixed width for larger screens */
+        height: 250px;  /* Fixed height to maintain circular shape */
+    }
+
+    #mintGmButton2::before {
+        top: px;
+        left: px;
+        right: px;
+        bottom: px;  /* Adjust the pseudo-element to match the new dimensions */
+    }
+}
+
+
+/* --------------------------------- */
+
+#mintGmButton2:hover::before {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* --------------------------------- */
+
+#mintGmButton2:active::before {
+    opacity: 0.9;
+    transform: scale(1.1); 
+}
+
+/* --------------------------------- */
+
+#mintGmButton2:hover {
+    box-shadow: 
+    0 8px 16px rgba(18, 2, 27, 0.869),
+    inset 0 1px 4px #fff6daa6, 
+    inset 0 -4px 7px rgb(0, 0, 0);
+transform: translateY(-5px);
+}
+
+/* --------------------------------- */
+
+#mintGmButton2:active {
+    box-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.129), 
+        inset 0 2px 4px #ffeeb542, 
+        inset 0 -1px 5px rgba(0, 0, 0, 0.439);
+    transform: translateY(2px);
+}
+
+/* --------------------------------- */
+
+#mintGmButton2:disabled {
+     background-color: grey;
+    cursor: not-allowed;
+    border: 1px solid #fabaff; /* White border for visibility */
+}
+
+/* --------------------------------- */
+
+.gms-section2, .nouns-dao-treasury-proceeds2, .quantity-price-module2, .gm-leaderboard-section2, .accordion2-container, .accordion4-container, .machine2 {
+    background: linear-gradient(circle, #c3ab221e 20%, rgba(13, 2, 23, 0.466), rgba(13, 2, 23, 0.466) 80%);
+    margin: 5px auto;
+    padding: 15px;
+    border-radius: 14px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 
+    0 1px 3px rgba(0, 0, 0, 0.033),
+    inset 0 2px 4px rgba(133, 190, 255, 0.227),
+    inset 0 -2px 1px #000000ba;
+    border: 2px solid #ffebba90; /* White border for visibility */
+    box-shadow: 
+    inset 0 -1px 3px rgba(255, 233, 162, 0.764), /* Inset shadow from the bottom */
+    0 4px 4px rgba(247, 104, 255, 0.286), /* Outer glow effect radiating upward */
+    0 4px 6px rgba(0, 255, 0, 0.235); /* Additional outer glow for enhanced visibility from the bottom */
+    width: 100%; 
+    align-items: center;
+    color: #ffeeb5f4;
+    max-width: 600px;
+    
+}
+
+/* --------------------------------- */
+
+.mint-options2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+/* --------------------------------- */
+
+.quantity-adjust2 {
+    position: relative;
+    background-color: rgba(50, 0, 66, 0.789);
+    color: #ffeeb5;
+    padding: 10px 20px;
+    
+    font-size: 16px;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    background-image: linear-gradient(to top left, #ffeeb51a, rgba(0, 0, 0, 0.212)); 
+    box-shadow: 
+        0 6px 8px rgba(135, 135, 135, 0.799), 
+        inset 0 5px 5px #ffeeb5, 
+        inset 0 -2px 6px rgb(0, 0, 0); 
+    box-shadow: 
+        0 1px 3px rgba(0, 0, 0, 0.033),
+        inset 0 2px 4px rgba(133, 190, 255, 0.227),
+        inset 0 -2px 1px #000000ba;
+    border: 2px solid #ffebba70; /* White border for visibility */
+    box-shadow: 
+    inset 0 -1px 3px rgba(255, 233, 162, 0.764), /* Inset shadow from the bottom */
+    0 4px 4px rgba(247, 104, 255, 0.286), /* Outer glow effect radiating upward */
+    0 4px 6px rgba(0, 255, 0, 0.235); /* Additional outer glow for enhanced visibility from the bottom */
+
+}
+
+/* --------------------------------- */
+
+.quantity-adjust2:hover {
+        background-color: #7f00c33a;
+        color: #00f2ff;
+        border-radius: 14px;
+        border: 1px solid #ffebba70; /* White border for visibility */
+        box-shadow: 
+            0 1px 3px #ffeeb5,
+            inset 0 2px 4px rgba(133, 190, 255, 0.227),
+            inset 0 -2px 1px #000000ba,
+            inset 0 -1px 3px rgba(255, 233, 162, 0.764), /* Inset shadow from the bottom */
+            0 4px 4px rgba(247, 104, 255, 0.286), /* Outer glow effect radiating upward */
+            0 4px 6px rgba(0, 255, 0, 0.235); /* Additional outer glow for enhanced visibility from the bottom */
+        transform: translateY(-1px);
+    }
+    
+
+/* --------------------------------- */
+
+.quantity-adjust2:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    transform: translateY(1px);
+    border-radius: 5px; 
+}
+
+/* --------------------------------- */
+
+.nft-quantity-input2 {
+    background-color: #17171700;
+    border-radius: 14px;
+    box-shadow: inset 0 5px 6px rgba(0, 0, 0, 0.974);
+    padding: 15px;
+    margin-top: 2px;
+    margin-bottom: 6px;
+    margin-left: 20px; 
+    margin-right: 20px;
+    
+    color: #333;
+    font-size: 1.5em;
+    width: 30%; 
+    align-items: center;
+    color: #ffeeb5f4;
+    text-shadow: 
+    0 0 8px rgba(255, 238, 181, 0.388), /* Glowing effect */
+    0 0 6px rgba(9, 56, 0, 0.528), /* Larger glow for softer edge */
+    0 0 4px rgba(0, 75, 11, 0.531); /* Even larger glow for extended soft edge */
+    border: 2px solid #ffebba90; /* White border for visibility */
+    box-shadow: 
+    inset 0 -1px 3px rgba(255, 233, 162, 0.764), /* Inset shadow from the bottom */
+    0 4px 4px rgba(247, 104, 255, 0.286), /* Outer glow effect radiating upward */
+    0 4px 6px rgba(0, 255, 0, 0.235); /* Additional outer glow for enhanced visibility from the bottom */
+}
+
+/* --------------------------------- */
+
+.nft-quantity-input2::-webkit-outer-spin-button,
+.nft-quantity-input2::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* --------------------------------- */
+
+.nft-quantity-input2[type=number] {
+    -moz-appearance: textfield; /* Specific to Firefox */
+    appearance: textfield; /* Standard property for other browsers */
+    text-align: center;
+}
+
+
+/* --------------------------------- */
+
+#gmGallery2 {
+    margin-top: 20px;
+}
+
+/* --------------------------------- */
+
+.gm-item2-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* --------------------------------- */
+
+.gm-item2-link:last-child {
+    margin-bottom: 0;
+}
+
+/* --------------------------------- */
+
+.gm-item2 {
+    padding: 10px;
+    background-color: #bdbdbd;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    position: relative;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* --------------------------------- */
+
+.gm-item2:active {
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    transform: translateY(1px);
+}
+
+/* --------------------------------- */
+
+.etherscan-icon2 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 16px;
+    color: #555;
+    z-index: 10;
+}
+
+/* --------------------------------- */
+
+.gm-item2-link:hover .etherscan-icon {
+    color: #4caf50;
+}
+
+/* --------------------------------- */
+
+.recessed-field2 {
+    background-color: #292929;
+    border-radius: 4px;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.809);
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    
+    color: #333;
+    font-size: .5em;
+    width: 80%; 
+    margin-left: auto; 
+    margin-right: auto;
+    transition: max-height 1s ease-out, padding 0.6s ease-out;
+    overflow: hidden;  /* Hide overflow content */
+    padding: 0 20px;  /* Adjust padding as necessary */
+    border: 1px solid #ffebba25; /* White border for visibility */
+    
+ }
+
+/* --------------------------------- */
+
+.quantity-price-module2 p {
+    color: #333;
+    font-size: 30px;
+    margin: 2px 0;
+}
+
+/* --------------------------------- */
+
+.gm-leaderboard2-section {
+    text-align: center;
+}
+
+/* --------------------------------- */
+
+.gm-leaderboard2-section h2 {
+    margin-bottom: 15px;
+}
+
+/* --------------------------------- */
+
+#leaderboardList2 {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+/* --------------------------------- */
+
+#leaderboard2List2 li {
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+}
+
+/* --------------------------------- */
+
+.see-more-btn2 {
+    position: relative;
+    background-color: #ff339c19;    
+    color: #ffeeb5;
+    padding: 10px 20px;
+    
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    background-image: linear-gradient(to top left, #ffeeb51a, rgba(0, 0, 0, 0.212)); 
+    box-shadow: 
+        0 6px 8px rgba(135, 135, 135, 0.799), 
+        inset 0 5px 5px #ffeeb5, 
+        inset 0 -2px 6px rgb(0, 0, 0); 
+    box-shadow: 
+    0 1px 3px rgba(0, 0, 0, 0.033),
+    inset 0 2px 4px rgba(133, 190, 255, 0.227),
+    inset 0 -2px 1px #000000ba;
+    border: 2px solid #ffebba70; /* White border for visibility */
+    box-shadow: 
+        inset 0 1px 1px rgba(237, 207, 108, 0.29), /* Inset shadow */
+        0 0 6px rgba(247, 104, 255, 0.286), /* Outer glow effect */
+        0 0 8px rgba(0, 255, 0, 0.235); /* Additional outer glow for enhanced visibility */
+        border: 2px solid #ffebba90; /* White border for visibility */
+
+}
+
+/* --------------------------------- */
+
+.see-more-btn2::before {
+    content: '';
+    position: absolute;
+    top: -5px; 
+    left: -5px; 
+    right: -5px; 
+    bottom: -5px;
+    border-radius: 8px; 
+    transition: opacity 0.3s, transform 0.3s;
+    background: linear-gradient(5deg, rgba(70, 18, 73, 0.157), rgba(79, 54, 100, 0.09)); 
+    opacity: 0; 
+    z-index: -1; 
+}
+
+/* --------------------------------- */
+
+.see-more-btn2:hover {
+    background-color: #c3007257;
+    color: #00f2ff;
+    box-shadow: 
+    0 1px 3px #ffeeb5,
+    inset 0 2px 4px rgba(133, 190, 255, 0.227),
+    inset 0 -2px 1px #000000ba;
+    transform: translateY(-2px); 
+}
+
+/* --------------------------------- */
+
+.see-more-btn2:hover::before {
+    opacity: 1; 
+    transform: scale(1.0); 
+}
+
+/* --------------------------------- */
+
+.see-more-btn2:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.099), inset 0 2px 4px rgba(255, 255, 255, 0.5), inset 0 -1px 5px rgba(0, 0, 0, 0.8);
+    transform: translateY(1px); 
+}
+
+/* --------------------------------- */
+
+.see-more-btn2:active::before {
+    transform: scale(0.95); 
+}
+
+/* --------------------------------- */
+
+.accordion2-container {
+    border-radius: 14px;
+    box-shadow: inset 0 3px 4px rgba(0, 0, 0, 0.974);
+    
+    color: #333;
+    font-size: 1.5em;
+    width: 100%; 
+    max-width: 600px;
+    align-items: center;
+    color: #ffeeb5f4;
+    text-shadow: 
+    0 0 8px rgba(255, 238, 181, 0.388), /* Glowing effect */
+    0 0 6px rgba(9, 56, 0, 0.528), /* Larger glow for softer edge */
+    0 0 4px rgba(0, 75, 11, 0.531); /* Even larger glow for extended soft edge */
+    border: 2px solid #ffebba90; /* White border for visibility */
+    box-shadow: 
+    inset 0 -1px 3px rgba(255, 233, 162, 0.764), /* Inset shadow from the bottom */
+    0 4px 4px rgba(247, 104, 255, 0.286), /* Outer glow effect radiating upward */
+    0 4px 6px rgba(0, 255, 0, 0.235); /* Additional outer glow for enhanced visibility from the bottom */
+}
+
+/* --------------------------------- */
+
+.accordion2-section {
+    margin-bottom: 10px;
+}
+
+/* --------------------------------- */
+
+.accordion2 {
+    position: relative;
+    background-color: #feb47b15;
+    color: #ffeeb5;
+    border: none;
+    padding: 20px 20px;
+    
+    font-size: 1em; /* Adjusted for H1 size */
+    font-weight: bold;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 
+        0 1px 3px rgba(0, 0, 0, 0.033),
+        inset 0 2px 4px rgba(133, 190, 255, 0.227),
+        inset 0 -2px 1px #000000ba;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    border: 2px solid #ffebba90; /* White border for visibility */
+    box-shadow: 
+    inset 0 -1px 3px rgba(255, 233, 162, 0.028), /* Inset shadow from the bottom */
+    0 2px 2px rgba(247, 104, 255, 0.286), /* Outer glow effect radiating upward */
+    0 2px 4px rgba(0, 255, 0, 0.235); /* Additional outer glow for enhanced visibility from the bottom */
+}
+/* --------------------------------- */
+
+.accordion2:hover {
+    background-color: #37034358;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.052), inset 0 1px 4px rgba(255, 255, 255, 0.204), inset 0 -2px 3px rgba(0, 0, 0, 0.468), 0 -1px 2px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+/* --------------------------------- */
+
+.accordion2:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.099), inset 0 2px 4px rgba(255, 255, 255, 0.5), inset 0 -1px 5px rgba(0, 0, 0, 0.8);
+    transform: translateY(1px);
+}
+
+/* --------------------------------- */
+
+/* Hover effect for chevron */
+.accordion2-container .accordion2 i {
+    transition: color 0.3s ease;
+}
+
+/* --------------------------------- */
+
+.accordion2-container .accordion2:hover i {
+    color: #00f2ff; /* Change to your preferred hover color */
+}
+
+/* --------------------------------- */
+
+/* Active class styles for chevron */
+.accordion2-container .accordion2.active i {
+    color: #33ff00; /* Change to your preferred active color */
+    transform: scaleY(-1);; /* Rotates the chevron */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* --------------------------------- */
+
+.panel2 {
+   transition: max-height 0.2s ease-out, padding 0.2s ease-out;
+   max-height: 0;  /* Initially hide the panel */
+   overflow: hidden;  /* Hide overflow content */
+   padding: 0 20px;  /* Adjust padding as necessary */
+   visibility: hidden;  /* Initially hidden */
+   border: 1px solid #ffebba70; /* White border for visibility */
+   box-shadow: 
+       inset 0 1px 1px rgba(237, 207, 108, 0.29), /* Inset shadow */
+       0 0 8px rgba(247, 104, 255, 0.286), /* Outer glow effect */
+       0 0 10px rgba(0, 255, 0, 0.235); /* Additional outer glow for enhanced visibility */
+}
+
+/* --------------------------------- */
+
+.accordion2.active + .panel2 {
+    max-height: 500px;
+    background-color: #242424;
+    border-radius: 14px;
+    box-shadow: inset 0 3px 4px rgba(0, 0, 0, 0.658);
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    
+    color: #333;
+    font-size: 1em;
+    width: 85%; 
+    margin-left: auto; 
+    margin-right: auto;
+    transition: ease-out, visibility 0s, padding 0.2s;
+    visibility: visible; /* makes the content visible */
+    text-shadow: 
+    0 0 8px rgba(255, 238, 181, 0.388), /* Glowing effect */
+    0 0 6px rgba(9, 56, 0, 0.528), /* Larger glow for softer edge */
+    0 0 4px rgba(0, 75, 11, 0.531); /* Even larger glow for extended soft edge */
+}
+
+/* --------------------------------- */
+/* Machine 2 */
+
+.accordion4-section4 {
+    margin-bottom: 0px;
+}
+
+/* --------------------------------- */
+
+.accordion4-container {
+    border-radius: 14px;
+    box-shadow: inset 0 3px 4px rgba(0, 0, 0, 0.974);
+    
+    color: #333;
+    font-size: 1.5em;
+    width: 100%; 
+    align-items: center;
+    color: #ffeeb5f4;
+    max-width: 600px;
+    text-shadow: 
+    0 0 8px rgba(255, 238, 181, 0.388), /* Glowing effect */
+    0 0 6px rgba(9, 56, 0, 0.528), /* Larger glow for softer edge */
+    0 0 4px rgba(0, 75, 11, 0.531); /* Even larger glow for extended soft edge */
+    border: 2px solid #ffebba90; /* White border for visibility */
+    box-shadow: 
+    inset 0 -1px 3px rgba(255, 233, 162, 0.764), /* Inset shadow from the bottom */
+    0 4px 4px rgba(247, 104, 255, 0.286), /* Outer glow effect radiating upward */
+    0 4px 6px rgba(0, 255, 0, 0.235); /* Additional outer glow for enhanced visibility from the bottom */
+
+}
+
+/* --------------------------------- */
+
+.accordion4 {
+    position: relative;
+    background-color: rgba(50, 0, 66, 0.122);
+    color: #ffeeb5;
+    border: none;
+    padding: 20px 20px;
+    
+    font-size: 1em; /* Adjusted for H1 size */
+    font-weight: bold;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 
+        0 1px 3px rgba(0, 0, 0, 0.033),
+        inset 0 2px 4px rgba(133, 190, 255, 0.227),
+        inset 0 -2px 1px #000000ba;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    border: 2px solid #ffebba90; /* White border for visibility */
+    box-shadow: 
+    inset 0 -1px 3px rgba(255, 233, 162, 0.028), /* Inset shadow from the bottom */
+    0 2px 2px rgba(247, 104, 255, 0.286), /* Outer glow effect radiating upward */
+    0 2px 4px rgba(0, 255, 0, 0.235); /* Additional outer glow for enhanced visibility from the bottom */
+}
+    
+/* --------------------------------- */
+
+.accordion4:hover {
+    background-color: #7919a22b;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.052), inset 0 1px 4px rgba(255, 255, 255, 0.204), inset 0 -2px 3px rgba(0, 0, 0, 0.468), 0 -1px 2px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+/* --------------------------------- */
+
+.accordion4:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.099),
+                inset 0 2px 4px rgba(255, 255, 255, 0.5),
+                inset 0 -1px 5px rgba(0, 0, 0, 0.8);
+    transform: translateY(1px);
+}
+
+/* --------------------------------- */
+
+.panel4 {
+    transition: max-height 0.2s ease-out, padding 0.2s ease-out;
+   max-height: 0;  /* Initially hide the panel */
+   overflow: hidden;  /* Hide overflow content */
+   padding: 0 20px;  /* Adjust padding as necessary */
+   visibility: hidden;  /* Initially hidden */
+   border: 2px solid #ffebba90; /* White border for visibility */
+   box-shadow: 
+       inset 0 1px 1px rgba(237, 207, 108, 0.29), /* Inset shadow */
+       0 0 8px rgba(247, 104, 255, 0.286), /* Outer glow effect */
+       0 0 10px rgba(0, 255, 0, 0.235); /* Additional outer glow for enhanced visibility */
+    
+}
+
+
+/* --------------------------------- */
+
+.accordion4.active + .panel4 {
+    max-height: 500px;
+    background-color: #242424;
+    border-radius: 14px;
+    box-shadow: inset 0 3px 4px rgba(0, 0, 0, 0.658);
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    
+    color: #333;
+    font-size: 1.5em;
+    width: 80%; 
+    margin-left: auto; 
+    margin-right: auto;
+    transition: ease-out, visibility 0s, padding 0.2s;
+    visibility: visible; /* makes the content visible */
+    text-shadow: 
+    0 0 8px rgba(255, 238, 181, 0.388), /* Glowing effect */
+    0 0 6px rgba(9, 56, 0, 0.528), /* Larger glow for softer edge */
+    0 0 4px rgba(0, 75, 11, 0.531); /* Even larger glow for extended soft edge */
+}
+
+
+/* --------------------------------- */
+
+/* Hover effect for chevron */
+.accordion4-container .accordion4 i {
+    transition: color 0.3s ease;
+}
+
+/* --------------------------------- */
+
+.accordion4-container .accordion4:hover i {
+    color: #00f2ff; /* Change to your preferred hover color */
+}
+
+/* --------------------------------- */
+
+/* Active class styles for chevron */
+.accordion4-container .accordion4.active i {
+    color: #33ff00; /* Change to your preferred active color */
+    transform: scaleY(-1);; /* Rotates the chevron */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* --------------------------------- */
+
+/* Styling for the H1 header within the panel */
+.panel4 h1 {
+    color: #333;
+    
+    font-size: 2em; /* Larger text for header */
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 15px;
+}
+
+/* --------------------------------- */
+
+/* Styling for paragraph text within the panel */
+.panel4 p {
+    
+    color: #666; /* Darker grey for readability */
+    font-size: 1.2em;
+    text-align: justify;
+    margin: 10px 20px;
+    line-height: 1.5;
+}
+
+/* --------------------------------- */
+
+/* General container for additional components like images or text generators */
+.panel4 .container {
+    max-height: 500px;
+    background-color: #242424;
+    border-radius: 14px;
+    box-shadow: inset 0 3px 4px rgba(0, 0, 0, 0.658);
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    
+    color: #333;
+    font-size: 1.5em;
+    width: 90%; 
+    margin-left: auto; 
+    margin-right: auto;
+    transition: ease-out, visibility 0s, padding 0.2s;
+    visibility: visible; /* makes the content visible */
+    text-shadow: 
+    0 0 8px rgba(255, 238, 181, 0.388), /* Glowing effect */
+    0 0 6px rgba(9, 56, 0, 0.528), /* Larger glow for softer edge */
+    0 0 4px rgba(0, 75, 11, 0.531); /* Even larger glow for extended soft edge */
+    border: 2px solid #7f00a6; /* White border for visibility */
+    box-shadow: 
+        inset 0 1px 1px rgba(237, 207, 108, 0.29), /* Inset shadow */
+        0 0 4px rgba(247, 104, 255, 0.286), /* Outer glow effect */
+        0 0 6px rgba(0, 255, 0, 0.235); /* Additional outer glow for enhanced visibility */
+}
+
+/* --------------------------------- */
+
+/* Styling for the AI meme machine area */
+.panel4 .ai-meme-machine {
+   transition: max-height 0.2s ease-out, padding 0.2s ease-out;
+    max-height: 0;  /* Initially hide the panel */
+    overflow: hidden;  /* Hide overflow content */
+    padding: 0 20px;  /* Adjust padding as necessary */
+    visibility: hidden;  /* Initially hidden */
+    background-color: #242424;
+    border-radius: 4px;
+    box-shadow: inset 0 3px 4px rgba(0, 0, 0, 0.974);
+    
+    color: #333;
+    font-size: 1.5em;
+    align-items: center;
+    color: #ffeeb5f4;
+    text-shadow: 
+    0 0 8px rgba(255, 238, 181, 0.388), /* Glowing effect */
+    0 0 6px rgba(9, 56, 0, 0.528), /* Larger glow for softer edge */
+    0 0 4px rgba(0, 75, 11, 0.531); /* Even larger glow for extended soft edge */
+    border: 1px solid #ffebba70; /* White border for visibility */
+    box-shadow: 
+        inset 0 1px 1px rgba(237, 207, 108, 0.29), /* Inset shadow */
+        0 0 8px rgba(247, 104, 255, 0.286), /* Outer glow effect */
+        0 0 10px rgba(0, 255, 0, 0.235); /* Additional outer glow for enhanced visibility */
+}
+
+/* --------------------------------- */
+
+/* Styling for inspirational quotes */
+.panel4 .inspirational-quote {
+    font-style: italic;
+    color: #454545; /* Soft black */
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+
+/* --------------------------------- */
+/* Styling for buttons used in the AI meme machine */
+
+.panel4 .action-button {
+        position: relative;
+        background-color: #ff339c19;    
+        color: #ffeeb5;
+        border: none;
+        padding: 10px 20px;
+        
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        background-image: linear-gradient(to top left, #ffeeb51a, rgba(0, 0, 0, 0.212)); 
+        box-shadow: 
+            0 6px 8px rgba(135, 135, 135, 0.799), 
+            inset 0 5px 5px #ffeeb5, 
+            inset 0 -2px 6px rgb(0, 0, 0); 
+        box-shadow: 
+        0 1px 3px rgba(0, 0, 0, 0.033),
+        inset 0 2px 4px rgba(133, 190, 255, 0.227),
+        inset 0 -2px 1px #000000ba;
+        border: 2px solid #ffebba70; /* White border for visibility */
+        box-shadow: 
+            inset 0 1px 1px rgba(237, 207, 108, 0.29), /* Inset shadow */
+            0 0 6px rgba(247, 104, 255, 0.286), /* Outer glow effect */
+            0 0 8px rgba(0, 255, 0, 0.235); /* Additional outer glow for enhanced visibility */
+    }
+
+/* --------------------------------- */
+
+
+.panel4 .action-button:before {
+        content: '';
+        position: absolute;
+        top: -5px; 
+        left: -5px; 
+        right: -5px; 
+        bottom: -5px;
+        border-radius: 8px; 
+        transition: opacity 0.3s, transform 0.3s;
+        background: linear-gradient(5deg, rgba(70, 18, 73, 0.157), rgba(79, 54, 100, 0.09)); 
+        opacity: 0; 
+        z-index: -1; 
+    }
+
+
+/* --------------------------------- */
+
+.panel4 .action-button:hover {
+    background-color: #43a047; /* Darker green on hover */
+}
+
+/* --------------------------------- */
+
+.panel4 .action-button:hover {
+    background-color: #c3007257;
+    color: #00f2ff;
+    box-shadow: 
+    0 1px 3px #ffeeb5,
+    inset 0 2px 4px rgba(133, 190, 255, 0.227),
+    inset 0 -2px 1px #000000ba;
+    transform: translateY(-2px); 
+}
+
+/* --------------------------------- */
+
+.panel4 .action-button:hover::before {
+    opacity: 1; 
+    transform: scale(1.0); 
+}
+
+/* --------------------------------- */
+
+.panel4 .action-button:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.099), inset 0 2px 4px rgba(255, 255, 255, 0.5), inset 0 -1px 5px rgba(0, 0, 0, 0.8);
+    transform: translateY(1px); 
+}
+
+/* --------------------------------- */
+
+.panel4 .action-button:active::before {
+    transform: scale(0.95); 
+}
+
+/* --------------------------------- */

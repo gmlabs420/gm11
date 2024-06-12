@@ -1,0 +1,365 @@
+/* ---------AI-IMAGE-GENERATOR------- */
+.machine {
+    background-color: #68cbfc80;
+    border: 5px solid #68cbfc80; /* border for visibility */
+    padding: 0px;
+    padding-top: 15px;
+    border-radius: 5px;
+    width: 100%; 
+    height: 750px; /* Set the height in pixels */
+    align-items: center;
+    color: #ffeeb5f4;
+    max-width: 500px;
+    min-width: 500px; /* Set the minimum width in pixels */
+    margin: 0px auto;
+    box-shadow: 
+        0 3px 8px #ffeeb5f4,
+        inset 0 2px 4px rgba(133, 190, 255, 0.227),
+        inset 0 -3px 2px #000000ba; 
+    text-shadow: 
+        0 0 4px rgba(255, 238, 181, 0.8), /* Glowing effect */
+        0 0 5px rgba(38, 38, 38, 0.766), /* Larger glow for softer edge */
+        0 0 2px rgb(0, 75, 11); /* Even larger glow for extended soft edge */
+    transition: background, border 0.9s ease; /* Add transition for smooth background change */
+}
+
+.machine:hover {
+    background-color: #68f7fc6e;
+    border: 5px solid #5bea62ab; /* White border for visibility */
+
+}
+
+/* --------------------------------- */
+
+.machine-top-container {
+    position: relative;
+    width: 105%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    margin-bottom: 20px;
+
+}
+
+.machine-header-box {
+    margin-left: 120px;
+}
+
+.machine-header-box h1 {
+    margin-top: 20px;
+
+}
+
+.machine-info-icon-box {
+    margin-right: 20px; /* Adjust alignment as needed */
+    margin-bottom: 31px;
+
+}
+
+.machine-info-icon {
+    margin-right: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    text-shadow: 0 0 4px rgba(255, 238, 181, 0.8), 0 0 5px rgba(38, 38, 38, 0.766), 0 0 2px rgb(0, 75, 11);
+    color: #ffeeb560;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.machine-info-icon:hover {
+    color: #ffeeb5;
+}
+
+.machine-info-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.machine-info-screen.show {
+    display: flex;
+}
+
+.machine-info-content {
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    background: #a2e0ff;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.95);
+    color: #333;
+    width: 375px;
+    height: 375px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    padding: 10px;
+    border: 2px solid rgb(255, 225, 0);
+}
+
+.machine-info-content h2 {
+    margin-top: 0px;
+}
+
+.machine-info-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 40px;
+    cursor: pointer;
+    text-shadow: 0 0 4px rgba(255, 238, 181, 0.8), 0 0 5px rgba(38, 38, 38, 0.766), 0 0 2px rgb(0, 75, 11);
+    color: #ffeeb5;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ---------SLIDER-COMPONENTS--------- */
+
+.slider-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+    text-align: center;
+    width: 220px;
+    position: relative; /* Added for positioning slider text */
+}
+
+.sliders-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 5px; /* Adjust the gap between the sliders */
+    margin: 5px 0; /* Adjust the margin as needed */
+}
+
+#complexityLevel:hover, #imageSize:hover {
+    opacity: 1;
+}
+
+#complexityLevel, #imageSize {
+    width: 90%;
+    opacity: 90%;
+    margin-bottom: 5px; /* Add some space between the slider and the label */
+    -webkit-appearance: none; /* Remove default appearance */
+    appearance: none; /* Remove default appearance */
+    height: 25px; /* Increased height */
+    border-radius: 34px; 
+    outline: none;
+    transition: background 0.6s;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.809);
+    border: 2px solid rgb(255, 225, 0)!important; /* border for visibility */
+}
+
+#complexityLevel::-webkit-slider-thumb, 
+#imageSize::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Remove default appearance */
+    appearance: none; /* Remove default appearance */
+    width: 25px; /* Set width to 25px */
+    height: 25px; /* Set height to 25px */
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #fff5cfe6, #ffd700 50%, rgb(255, 165, 0)); /* Glossy effect */
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(135, 135, 135, 0.425), inset 0 1px 1px rgba(255, 255, 255, 0.8), inset 0 -1px 2px rgba(0, 0, 0, 0.386);
+    border: 2px solid rgb(255, 225, 0)!important; /* border for visibility */
+    position: relative;
+    z-index: 10; /* Ensure text stays above the thumb */
+
+}
+
+#complexityLevel::-moz-range-thumb,
+#imageSize::-moz-range-thumb {
+    -webkit-appearance: none; /* Remove default appearance */
+    appearance: none; /* Remove default appearance */
+    width: 25px; /* Set width to 25px */
+    height: 25px; /* Set height to 25px */
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #fff5cfe6, #ffd700 50%, rgb(255, 165, 0)); /* Glossy effect */
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(135, 135, 135, 0.425), inset 0 1px 1px rgba(255, 255, 255, 0.8), inset 0 -1px 2px rgba(0, 0, 0, 0.386);
+    border: 2px solid rgb(255, 225, 0)!important; /* border for visibility */
+    position: relative;
+    z-index: 10; /* Ensure text stays above the thumb */
+}
+
+#complexityLevel::-ms-thumb, 
+#imageSize::-ms-thumb {
+    -webkit-appearance: none; /* Remove default appearance */
+    appearance: none; /* Remove default appearance */
+    width: 25px; /* Set width to 25px */
+    height: 25px; /* Set height to 25px */
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #fff5cfe6, #ffd700 50%, rgb(255, 165, 0)); /* Glossy effect */
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(135, 135, 135, 0.425), inset 0 1px 1px rgba(255, 255, 255, 0.8), inset 0 -1px 2px rgba(0, 0, 0, 0.386);
+    border: 2px solid rgb(255, 225, 0)!important; /* border for visibility */
+    position: relative;
+    z-index: 10; /* Ensure text stays above the thumb */
+}
+
+.slider-text {
+    position: absolute;
+    top: 0; /* Align text to the top */
+    left: 50%;
+    margin-left: 34px;
+    transform: translateX(-50%);
+    color: #ffeeb5;
+    font-weight: bold;
+    font-size: 13px;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
+    z-index: 11; /* Ensure text stays above the thumb */
+    pointer-events: none; /* Ensure it does not interfere with slider functionality */
+    height: 25px; /* Set height to match thumb */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* --------------------------------- */
+
+
+/* ---------RECESSED-FIELD--------- */
+.recessed-field3 {
+    background: #a2e0ff80;
+    border-radius: 5px;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.809);
+    padding: 15px;
+    margin-top: 21px;
+    margin-bottom: 15px;
+    color: #333;
+    font-size: .5em;
+    width: 375px; /* Set the width in pixels */
+    height: 375px; /* Set the height in pixels */
+    margin-left: auto; 
+    margin-right: auto;
+    transition: max-height 1s ease-out, padding 0.6s ease-out;
+    overflow: hidden; /* Hide overflow content */
+    padding: 0 20px; /* Adjust padding as necessary */
+    border: 2px solid rgb(255, 225, 0); /* border for visibility */
+}
+
+/* ---------BUTTONS--------- */
+.image-button-container {
+    display: flex;
+    justify-content: center;
+    gap: 5px; /* Adjust the gap as needed */
+    margin-top: 10px; /* Add some margin to the top */
+}
+
+.image-action-button {
+    background-color: #4A9DC7;
+    color: #ffeeb5;
+    padding: 8px 30px;
+    font-size: 25px;
+    border-radius: 5px;
+    border: 2px solid rgb(255, 225, 0); /* border for visibility */
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 
+      0 1px 3px #ffeeb5,
+      inset 0 2px 4px rgba(133, 190, 255, 0.227),
+      inset 0 -2px 1px #000000ba; 
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-left: 10px; 
+    margin-right: 10px;
+    text-shadow: 
+      0 0 4px rgba(255, 238, 181, 0.8), /* Glowing effect */
+      0 0 5px rgba(38, 38, 38, 0.766), /* Larger glow for softer edge */
+      0 0 2px rgb(0, 75, 11); /* Even larger glow for extended soft edge */
+}
+
+.image-action-button:hover {
+    background-color: #ffc014ed;
+    color: #00f2ff;
+    border: 2px solid rgb(255, 225, 0); /* border for visibility */
+    transform: translateY(-2px);
+}
+
+.image-action-button:active {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 5px; 
+    transform: translateY(1px);
+}
+
+/* --------MEDIA QUERIES--------- */
+@media (max-width: 768px) {
+
+.image-machine-header-box h1 {
+    margin-left: 0; /* Adjust alignment for
+    width: 375px; /* Set the width in pixels */
+    height: 375px; /* Set the height in pixels */
+    margin-left: auto;
+    margin-right: auto;
+    transition: max-height 1s ease-out, padding 0.6s ease-out;
+    overflow: hidden; /* Hide overflow content */
+    padding: 0 20px;
+    border: 2px solid rgb(255, 225, 0); /* border for visibility */
+}
+
+/* ---------BUTTON-CONTAINER-------- */
+.image-button-container {
+    display: flex;
+    justify-content: center;
+    gap: 5px; /* Adjust the gap as needed */
+    margin-top: 10px; /* Add some margin to the top */
+}
+
+.image-action-button {
+    background-color: #4A9DC7;
+    color: #ffeeb5;
+    padding: 8px 30px;
+    font-size: 25px;
+    border-radius: 5px;
+    border: 2px solid rgb(255, 225, 0); /* border for visibility */
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 
+      0 1px 3px #ffeeb5,
+      inset 0 2px 4px rgba(133, 190, 255, 0.227),
+      inset 0 -2px 1px #000000ba; 
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-left: 10px; 
+    margin-right: 10px;
+    text-shadow: 
+      0 0 4px rgba(255, 238, 181, 0.8), /* Glowing effect */
+      0 0 5px rgba(38, 38, 38, 0.766), /* Larger glow for softer edge */
+      0 0 2px rgb(0, 75, 11); /* Even larger glow for extended soft edge */
+}
+
+.image-action-button:hover {
+    background-color: #ffc014ed;
+    color: #00f2ff;
+    border: 2px solid #c4ff72ab; /* border for visibility */
+    transform: translateY(-2px);
+}
+
+.image-action-button:active {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 5px; 
+    transform: translateY(1px);
+}
+
+/* --------MEDIA QUERIES-------- */
+@media (max-width: 768px) {
+    .machine-header-box h1 {
+        margin-left: 90px; /* Adjust alignment as needed */
+        margin-top: 10px;
+    }
+}
+@media (min-width: 769px) {
+    .machine-header-box h1 {
+        margin-left: 130px; /* Adjust alignment as needed */
+        margin-top: 10px;
+    }
+}
+
+
+}

@@ -1,0 +1,84 @@
+/* --------------------------------- */
+
+.footer-style {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    padding-bottom: 70px; /* Adjust this value as needed for your design */
+    text-align: center;
+    background-color: #0e0e0e;
+    color: #ffeeb5;    
+    text-shadow: 
+    0 0 1px rgba(255, 238, 181, 0.8), /* Glowing effect */
+    0 0 2px rgba(38, 38, 38, 0.766), /* Larger glow for softer edge */
+    0 0 1px rgb(0, 75, 11); /* Even larger glow for extended soft edge */
+    gap: 50px;
+}
+
+/* --------------------------------- */
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px; /* Increase this value for more space between links */
+}
+
+/* --------------------------------- */
+
+.footer-contract-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px; /* Increase this value for more space between links */
+}
+
+/* --------------------------------- */
+
+.footer-link {
+    text-decoration: none;
+    color: #00bbfa; /* This will ensure that the color is blue */
+    font-size: 1.2em; /* Add font size here, adjust as needed */
+
+}
+
+/* --------------------------------- */
+
+.footer-toggle-container {
+    margin-top: 20px;
+    margin-bottom: 20px; /* Add some space between the toggle and the links */
+}
+
+/* --------------------------------- */
+
+.footer-link:hover {
+    color: #00588f;
+}
+
+/* --------------------------------- */
+/* Footer toggle for page navigation */
+#footerToggle1:checked + .toggle-label::after,
+#footerToggle2:checked + .toggle2-label::after {
+    transform: translateX(26px); /* Adjusts for the footer toggle specifically */
+    /* Apply any additional styling needed for the footer toggle's "ON" state here */
+}
+
+/* --------------------------------- */
+
+/* Custom line style for the footer */
+.footer-style hr {
+    border: none; /* Remove any default border */
+    height: 4px; /* Increase height for better visibility */
+    background: #ffeeb5f4; /* Use a bright color for contrast */
+    margin: 0px 0; /* Increase vertical spacing */
+    opacity: 0.9; /* Ensure the line is not transparent */
+    width: 80%; /* Set width to make it more noticeable */
+}
+
+/* --------------------------------- */
+
+
+
+/* --------------------------------- */

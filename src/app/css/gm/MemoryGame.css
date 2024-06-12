@@ -1,0 +1,280 @@
+/* --------------------------------- */
+/* ----------GMemory----------------- */
+
+.memory-card-game-container {
+    position: relative;
+    background-color: #68cbfc80;
+    border: 5px solid #68cbfc80;
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 500px;
+    min-width: 500px;
+    height: 750px;
+    margin: 0 auto;
+    box-shadow: 0 3px 8px #ffeeb5f4, inset 0 2px 4px rgba(133, 190, 255, 0.227), inset 0 -3px 2px #000000ba;
+    text-shadow: 0 0 4px rgba(255, 238, 181, 0.8), 0 0 5px rgba(38, 38, 38, 0.766), 0 0 2px rgb(0, 75, 11);
+    transition: background, border 2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffeeb5f4;
+}
+
+.memory-card-game-container:hover {
+    background-color: #68f7fc6e;
+    border: 5px solid #5bea62ab; /* White border for visibility */
+
+}
+
+.memory-card-top-container {
+    position: relative;
+    align-items: center;
+    width: 105%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    border: 2px solid rgb(255, 225, 0);
+
+}
+
+.memory-card-header-box {
+    align-items: center;
+    border: 1px solid rgb(255, 225, 0);
+    margin-top: 15px;
+
+}
+
+.memory-card-header-box h1 {
+    margin-left: 130px;
+}
+
+.memory-card-info-icon-box {
+    margin-right: 10px;
+
+}
+
+.memory-card-info-icon {
+    font-size: 20px;
+    cursor: pointer;
+    text-shadow: 0 0 4px rgba(255, 238, 181, 0.8), 0 0 5px rgba(38, 38, 38, 0.766), 0 0 2px rgb(0, 75, 11);
+    color: #ffeeb560;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 33px;
+    margin-right: 5px;
+
+}
+
+.memory-card-info-icon:hover {
+    color: #ffeeb5;
+}
+
+#memory-card-game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+    margin-top: 25px;
+}
+
+.memory-card {
+    perspective: 1000px;
+    width: 75px;
+    height: 100px;
+}
+
+.memory-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.memory-card.flip .memory-card-inner {
+    transform: rotateY(540deg);
+}
+
+.memory-card-front, .memory-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 5px;
+}
+
+.memory-card-front {
+    background-color: #ffffff; /* Front side color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: #000;
+    transform: rotateY(180deg);
+}
+
+.memory-card-back {
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1)), 
+                      linear-gradient(-45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1));
+    background-size: 20px 20px; /* Adjust size of the pattern */
+    background-color: #a8ff8b; /* Back side color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: #000;
+    text-shadow: 0 0 4px rgba(255, 238, 181, 0.8), 0 0 5px rgba(38, 38, 38, 0.766), 0 0 2px rgb(0, 75, 11);
+    box-shadow: 0 1px 3px #ffeeb5, inset 0 2px 4px rgba(133, 190, 255, 0.227), inset 0 -2px 1px #000000ba;
+    border: 2px solid rgb(255, 225, 0);
+}
+
+.memory-card-status-container {
+    display: flex;
+    justify-content: center; /* Center align the status boxes */
+    width: 100%;
+    padding: 5px 0;
+}
+
+.memory-card-status-box {
+    display: flex;
+    align-items: center;
+    background: #a2e0ff80;
+    border-radius: 5px;
+    padding: 8px 18px;
+    width: 200px;
+    height: 75px;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.809);
+    text-align: center;
+    border: 2px solid rgb(255, 225, 0);
+    flex-direction: row;
+    margin: 4px 12px; /* Adjust margin to bring the boxes closer together */
+}
+
+.memory-card-status-label {
+    font-weight: bold;
+    font-size: 30px;
+    margin: 0 10px;
+}
+
+.memory-card-status-box p {
+    font-size: 40px; /* Make the score and time numerals larger */
+    margin: 0 10px;
+}
+
+.memory-card-game-over-screen, .memory-card-win-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffeeb5;
+    z-index: 10;
+}
+
+.memory-card-game-over-message, .memory-card-win-message {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.memory-card-final-score {
+    font-size: 20px;
+}
+
+.memory-card-game-controls {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.memory-card-instructions {
+    margin-top: 1px;
+}
+
+/* Control Buttons */
+.control-button {
+    background-color: #4A9DC7;
+    color: #ffeeb5;
+    padding: 8px;
+    width: 70px;
+    height: 70px;
+    font-size: 25px;
+    border-radius: 5px;
+    border: 2px solid rgb(255, 225, 0);
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 1px 3px #ffeeb5, inset 0 2px 4px rgba(133, 190, 255, 0.227), inset 0 -2px 1px #000000ba;
+    margin: 5px 20px;
+    text-shadow: 0 0 4px rgba(255, 238, 181, 0.8), 0 0 5px rgba(38, 38, 38, 0.766), 0 0 2px rgb(0, 75, 11);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.control-button:hover {
+    background-color: #ffc014ed;
+    color: #00f2ff;
+    border: 2px solid rgb(255, 225, 0);
+    transform: translateY(-2px);
+}
+
+/* Info Screen */
+.memory-card-info-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.memory-card-info-screen.show {
+    display: flex;
+}
+
+.memory-card-info-content {
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    background: #a2e0ff;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.95);
+    color: #333;
+    width: 375px;
+    height: 375px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    padding: 10px;
+    border: 2px solid rgb(255, 225, 0);
+}
+
+.memory-card-info-content h2 {
+    margin-top: 0px;
+}
+
+.memory-card-info-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 40px;
+    cursor: pointer;
+    text-shadow: 0 0 4px rgba(255, 238, 181, 0.8), 0 0 5px rgba(38, 38, 38, 0.766), 0 0 2px rgb(0, 75, 11);
+    color: #ffeeb5;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}

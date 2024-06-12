@@ -1,0 +1,497 @@
+
+:root {
+    --font-size-small: 0.75rem;
+    --font-size-base: 1rem;
+    --font-size-medium: 1.25rem;
+    --font-size-large: 1.5rem;
+    --font-size-xlarge: 2rem;
+    --font-size-xxlarge: 2.5rem;
+    --font-size-xxxlarge: 3rem;
+    --font-size-huge: 3.5rem;
+    --font-size-xhuge: 4rem;
+    --font-size-xxhuge: 4.5rem;
+}
+
+/* --------------------------------- */
+
+h1, h2, h3, h4, p {
+    text-align: center;
+}
+
+/* --------------------------------- */
+
+h1 {
+    font-size: var(--font-size-huge);
+}
+
+/* --------------------------------- */
+
+h2 {
+    font-size: var(--font-size-xlarge);
+}
+
+/* --------------------------------- */
+
+h3 {
+    font-size: var(--font-size-large);
+}
+
+/* --------------------------------- */
+
+h4 {
+    font-size: var(--font-size-base);
+}
+
+/* --------------------------------- */
+
+/* Wrapper for the h4 text */
+.footer-text-wrapper {
+    width: 60%; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the div horizontally */
+    text-align: center; /* Center the text inside the div */
+    padding: 20px; /* Add some padding for better readability */
+}
+
+/* --------------------------------- */
+
+/* General Resets */
+body, h1, h2, p, ul, li {
+    margin: 0;
+}
+
+/* --------------------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+/* --------------------------------- */
+  
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensure the body takes up the full height */
+    overflow: auto; /* Allow scrolling */
+}
+
+/* --------------------------------- */
+
+body {
+    font-size: var(--font-size-base);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ensure the content starts from the top */
+    align-items: center;
+    min-height: 100vh; /* Ensure the body takes up the full height of the viewport */
+    background: #015D82;
+    overflow-x: hidden;
+    overflow-y: scroll; /* Always show vertical scrollbar */
+    
+}
+
+/* --------------------------------- */
+
+header, footer {
+    width: 100%;
+    position: relative; /* Ensure they are part of the normal document flow */
+}
+
+/* --------------------------------- */
+
+.header {
+    color: #fff;
+    text-align: center;
+}
+
+/* --------------------------------- */
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* --------------------------------- */
+
+.header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* --------------------------------- */
+
+.footer .logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* --------------------------------- */
+
+.header .client-info {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* --------------------------------- */
+.subheading {
+    font-size: 10px;
+    color: #c0ffb5;
+    text-shadow: 0 0 4px rgba(255, 238, 181, 0.8), 0 0 5px rgba(38, 38, 38, 0.766), 0 0 2px rgb(0, 75, 11);
+    margin: 0; /* Remove margin to bring elements closer */
+    padding: 0px; /* Remove padding to bring elements closer */
+    padding-left: 5px;
+    line-height: 1; /* Adjust line height to bring closer to h1 */
+  }
+  
+  .left-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .left-container h1 {
+    margin: 0; /* Remove margin to bring elements closer */
+    padding: 0; /* Remove padding to bring elements closer */
+    line-height: 1; /* Adjust line height if necessary */
+  }
+  
+  .top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+
+.main-content {
+    width: 90%; /* Adjust width as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --------------------------------- */
+
+.columns-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px; /* Adjust the max-width as needed */
+    margin: 0 auto;
+  }
+ 
+/* --------------------------------- */
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items within each column */
+    padding: 5px;
+    box-sizing: border-box;
+    flex: 1;
+  }
+
+/* --------------------------------- */
+
+.left-column, .middle-column, .right-column {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    max-width: 500px; /* Adjust max-width as needed */
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+
+}
+
+/* --------------------------------- */
+
+.full-width-section-container {
+
+    display: flex;
+    justify-content: center; /* Center the full-width section */
+    width: 75%; /* Full width of the page */
+}
+
+/* --------------------------------- */
+
+.full-width-section {
+
+    background: linear-gradient(circle, #c3ab221e 20%, rgba(13, 2, 23, 0.466), rgba(13, 2, 23, 0.466) 80%);
+    padding: 15px;
+    border-radius: 14px;
+    border: 5px solid #c4ff72ab; /* border for visibility */
+    width: 75%; 
+    align-items: center;
+    color: #ffeeb5f4;
+    margin: 10px auto;
+    box-shadow: 
+    0 1px 3px #d5ffb5,
+    inset 0 2px 4px rgba(133, 190, 255, 0.227),
+    inset 0 -3px 2px #000000ba; 
+}
+
+
+
+/* Add this to your existing CSS */
+
+/* --------------------------------- */
+/* ----WIDE COLUMN LAYOUT----------- */
+
+.columns-container.wide-column {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .columns-container.wide-column > .column {
+    flex: 0 0 100%;
+    max-width: 1100px; /* Adjust based on the full width */
+  }
+  
+  @media (max-width: 768px) {
+    .columns-container.wide-column > .column {
+      flex: 0 0 100%;
+      max-width: 500px;
+    }
+  }
+  
+
+
+/* --------------------------------- */
+/* --------------------------------- */
+/* --------------------------------- */
+/* --------------------------------- */
+/* --------------------------------- */
+/* -------MEDIA-QUERIES------------- */
+/* Adjust media queries for responsiveness */
+
+@media (max-width: 1600px) {
+    .columns-container {
+        flex-direction: column;
+        align-items: center; /* Center align columns */
+
+    }
+    .column {
+        margin: 5px 0; /* Adjust spacing for smaller screens */
+        text-align: center; /* Center align text inside columns */
+
+    }
+
+    .full-width-section-container {
+
+        justify-content: center; /* Ensure full-width section is centered */
+    }
+
+    .full-width-section {
+
+        margin: 10px 0; /* Adjust spacing for smaller screens */
+        text-align: center; /* Center align text inside columns */
+        width: 500px; 
+        align-items: center; /* Center align columns */
+        text-align: center; /* Center align text inside columns */
+        justify-content: center; /* Ensure full-width section is centered */
+
+    }
+
+    
+
+
+    
+       
+      }
+
+      @media (max-width: 500px) {
+        .top-nav {
+            flex-direction: row;
+            text-align: center;
+            justify-content: space-between;
+        }
+    
+      
+    
+        .dropdown-content {
+            position: absolute;
+            top: 90px; /* Adjust as needed */
+            left: 130px; /* Centering */
+            transform: translateX(-50%);
+            box-shadow: none;
+        }
+    
+        .dropdown-button {
+            width: 100%;
+        }
+    
+        .hamburger-icon {
+            font-size: 50px;
+        }
+    }
+    
+   
+
+
+/* --------------------------------- */
+/* --------------------------------- */
+/* --------------------------------- */
+/* --------------------------------- */
+/* --------------------------------- */
+/* ---------Gradient Background----- */
+
+.gradient-background {
+    background: linear-gradient(
+        to bottom,
+        #015D82, /* Deep Blue */
+        #4A9DC7, /* Sky Blue */
+        rgb(240, 191, 140), /* Light Orange */
+        rgb(242, 154, 75)  /* Orange */
+    );
+}
+
+/* --------------------------------- */
+
+.gradient-background2 {
+    background: linear-gradient(to bottom, #000000, #2f063c, #feb47b);
+}
+
+/* --------------------------------- */
+/* --------------------------------- */
+/* --------------------------------- */
+/* --------------------------------- */
+/* --------------------------------- */
+/* -------------DROP---------------- */
+
+.gm-drop-circle {
+    width: 40px;
+    height: 40px;
+    background-color: #4caf50;
+    color: #ffeeb5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to top left, #ffeeb51a, rgba(0, 0, 0, 0.212));
+    box-shadow: 
+        0 2px 4px rgba(135, 135, 135, 0.066), 
+        inset 0 1px 3px #ffeeb5be, 
+        inset 0 -2px 6px rgb(0, 0, 0);
+    text-shadow: 
+        0 0 8px rgba(255, 238, 181, 0.8), /* Glowing effect */
+        0 0 10px rgba(38, 38, 38, 0.766), /* Larger glow for softer edge */
+        0 0 4px rgb(35, 0, 75); /* Even larger glow for extended soft edge */
+    border: 1px solid #ffebba70; /* White border for visibility */
+    box-shadow: 
+        inset 0 1px 1px rgba(237, 207, 108, 0.505), /* Inset shadow */
+        0 0 8px rgba(247, 104, 255, 0.485), /* Outer glow effect */
+        0 0 10px rgba(0, 255, 0, 0.5); /* Additional outer glow for enhanced visibility */
+}
+
+/* --------------------------------- */
+
+.gn-drop-circle {
+    width: 40px;
+    height: 40px;
+    background-color: #020112;
+    color: #ffeeb5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #200426;
+    background-image: linear-gradient(to top left, #ffeeb51a, rgba(0, 0, 0, 0.212));
+    box-shadow: 
+        0 2px 4px rgba(135, 135, 135, 0.066), 
+        inset 0 1px 3px #ffeeb5be, 
+        inset 0 -2px 6px rgb(0, 0, 0);
+    text-shadow: 
+        0 0 8px rgba(255, 238, 181, 0.8), /* Glowing effect */
+        0 0 10px rgba(38, 38, 38, 0.766), /* Larger glow for softer edge */
+        0 0 4px rgb(35, 0, 75); /* Even larger glow for extended soft edge */
+    border: 1px solid #ffebba70; /* White border for visibility */
+    box-shadow: 
+        inset 0 1px 1px rgba(237, 207, 108, 0.505), /* Inset shadow */
+        0 0 8px rgba(247, 104, 255, 0.485), /* Outer glow effect */
+        0 0 10px rgba(0, 255, 0, 0.5); /* Additional outer glow for enhanced visibility */
+}
+
+/* --------------------------------- */
+/* --------------------------------- */
+/* --------------------------------- */
+/* --------------------------------- */
+/* -----PAGE TOGGLE----------------- */
+
+#pageToggle1:checked + .toggle-label {
+    transform: translateX(26px);
+}
+
+/* --------------------------------- */
+
+#pageToggle2:checked + .toggle2-label::after {
+    transform: translateX(26px);
+}
+
+/* --------------------------------- */
+/* --------------------------------- */
+/* --------------------------------- */
+/* --------------------------------- */
+/* --------------------------------- */
+/* ---------SHARE MODAL------------- */
+
+.share-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+  }
+
+  /* --------------------------------- */
+  
+  .share-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+
+  /* --------------------------------- */
+  
+  .share-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  /* --------------------------------- */
+
+  .quantity-divider {
+    border: none; /* Remove any default border */
+    height: 4px; /* Increase height for better visibility */
+    background: #ffeeb5f4; /* Use a bright color for contrast */
+    margin: 5px 0; /* Increase vertical spacing */
+    opacity: 0.9; /* Ensure the line is not transparent */
+    width: 80%; /* Set width to make it more noticeable */
+    margin-left: auto; /* Center align the hr */
+    margin-right: auto; /* Center align the hr */
+}
+
+  /* --------------------------------- */
+  /* --------------------------------- */
+  /* --------------------------------- */
+  /* --------------------------------- */
+  /* --------------------------------- */
+
+

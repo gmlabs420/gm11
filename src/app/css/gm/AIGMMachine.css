@@ -1,0 +1,407 @@
+
+.text-machine {
+    background-color: #68cbfc80;
+    border: 5px solid #68cbfc80; /* border for visibility */
+    padding: 0px;
+    padding-top: 15px;
+    border-radius: 5px;
+    width: 100%;
+    height: 750px; /* Set the height in pixels */
+    align-items: center;
+    color: #ffeeb5f4;
+    max-width: 500px;
+    min-width: 500px; /* Set the minimum width in pixels */
+    margin: 0px auto;
+    box-shadow: 
+        0 3px 8px #ffeeb5f4,
+        inset 0 2px 4px rgba(133, 190, 255, 0.227),
+        inset 0 -3px 2px #000000ba; 
+    text-shadow: 
+        0 0 4px rgba(255, 238, 181, 0.8), /* Glowing effect */
+        0 0 5px rgba(38, 38, 38, 0.766), /* Larger glow for softer edge */
+        0 0 2px rgb(0, 75, 11); /* Even larger glow for extended soft edge */
+    transition: background, border 2s ease; /* Add transition for smooth background change */
+}
+
+.text-machine:hover {
+    background-color: #68f7fc6e;
+    border: 5px solid #5bea62ab; /* White border for visibility */
+
+}
+
+.text-machine-top-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+
+.text-machine-header-box {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.text-machine-info-icon-box {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.text-machine-info-icon {
+    font-size: 30px;
+    cursor: pointer;
+    text-shadow: 
+        0 0 4px rgba(255, 238, 181, 0.8), 
+        0 0 5px rgba(38, 38, 38, 0.766), 
+        0 0 2px rgb(0, 75, 11);
+    color: #ffeeb5;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    padding-left: 0px;
+    padding-bottom: 5px;
+    margin-right: 5px;
+    margin-bottom: 35px;
+}
+
+.text-tags-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+    justify-content: center; /* Center the grid */
+    gap: 5px; /* Maintain gap */
+    margin-bottom: 10px;
+}
+
+.text-tags-container-wrapper {
+    width: 50%; /* Adjust this percentage to bring columns closer together */
+    margin: 20px auto;
+}
+
+.text-sliders-row {
+    display: flex;
+    justify-content: center; /* Center the sliders horizontally */
+    margin: 10px 0; /* Add some margin for spacing */
+}
+
+.text-gm-slider-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 20px; /* Add margin to space out the sliders */
+}
+
+.text-gm-slider {
+    width: 300px; /* Adjust the width as needed */
+    margin-bottom: 5px; /* Add some space between the slider and the label */
+    -webkit-appearance: none; /* Remove default appearance */
+    appearance: none; /* Remove default appearance */
+    height: 25px; /* Increased height */
+    border-radius:     34px; 
+    outline: none;
+    transition: background 0.2s;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.809);
+    border: 2px solid rgb(255, 225, 0)!important; /* border for visibility */
+}
+
+.text-gm-slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Remove default appearance */
+    appearance: none; /* Remove default appearance */
+    width: 25px; /* Thumb size */
+    height: 25px; /* Thumb size */
+    border-radius: 50%;
+    background-color: rgb(255, 225, 0); /* Same yellow as GM button */
+    cursor: pointer;
+    box-shadow: 
+        0 2px 4px rgba(135, 135, 135, 0.425), 
+        inset 0 2px 2px #ffeeb5, 
+        inset 0 -1px 3px rgba(0, 0, 0, 0.386); 
+    border: 2px solid rgb(255, 225, 0)!important; /* border for visibility */
+}
+
+/* For Firefox */
+.text-gm-slider::-moz-range-thumb {
+    width: 25px; /* Thumb size */
+    height: 25px; /* Thumb size */
+    border-radius: 50%;
+    background-color: rgb(255, 225, 0); /* Same yellow as GM button */
+    cursor: pointer;
+    box-shadow: 
+        0 2px 4px rgba(135, 135, 135, 0.425), 
+        inset 0 2px 2px #ffeeb5, 
+        inset 0 -1px 3px rgba(0, 0, 0, 0.386); 
+    border: 2px solid rgb(255, 225, 0)!important; /* border for visibility */
+}
+
+/* For Internet Explorer */
+.text-gm-slider::-ms-thumb {
+    width: 25px; /* Thumb size */
+    height: 25px; /* Thumb size */
+    border-radius: 50%;
+    background-color: rgb(255, 225, 0); /* Same yellow as GM button */
+    cursor: pointer;
+    box-shadow: 
+        0 2px 4px rgba(135, 135, 135, 0.425), 
+        inset 0 2px 2px #ffeeb5, 
+        inset 0 -1px 3px rgba(0, 0, 0, 0.386); 
+    border: 2px solid rgb(255, 225, 0)!important; /* border for visibility */
+}
+
+.text-recessed-field2 {
+    background: #a2e0ff80 !important;
+    border-radius: 5px !important;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.809) !important;
+    padding: 15px !important;
+    margin-top: 10px !important;
+    margin-bottom: 15px !important;
+    color: #ffeeb5f4!important;
+    font-size: .5em !important;
+    width: 400px !important; /* Set the width in pixels */
+    height: 210px !important; /* Set the height in pixels */
+    margin-left: auto !important; 
+    margin-right: auto !important;
+    transition: max-height 1s ease-out, padding 0.6s ease-out !important;
+    overflow-y: auto !important;  /* Enable vertical scrolling */
+    padding: 0 20px !important;  /* Adjust padding as necessary */
+    border: 2px solid rgb(255, 225, 0) !important; /* border for visibility */
+}
+
+/* Style the scrollbar */
+.text-recessed-field2::-webkit-scrollbar {
+    width: 20px;
+}
+
+.text-recessed-field2::-webkit-scrollbar-track {
+    background: #157ea7;
+    border-radius: 5px;
+    -webkit-appearance: none; /* Remove default appearance */
+    appearance: none; /* Remove default appearance */
+    outline: none;
+    transition: background 0.2s;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.809);
+}
+
+.text-recessed-field2::-webkit-scrollbar-thumb {
+    -webkit-appearance: none; /* Remove default appearance */
+    appearance: none; /* Remove default appearance */
+    width: 5px; /* Thumb size */
+    height: 5px; /* Thumb size */
+    border-radius: 5px;
+    background-color: rgb(255, 225, 0); /* Same yellow as GM button */
+    cursor: pointer;
+    box-shadow: 
+        0 2px 4px rgba(135, 135, 135, 0.425), 
+        inset 0 2px 2px #ffeeb5, 
+        inset 0 -1px 3px rgba(0, 0, 0, 0.386); 
+    border: 2px solid #4A9DC7; /* Same border as GM button */
+}
+
+.text-recessed-field2 h4 {
+    color: #ffeeb5; /* Match the text color */
+    font-size: 2em; /* Set a specific font size */
+    line-height: 1.5; /* Adjust line height for readability */
+    text-align: center; /* Center align the text */
+    margin: 10px 0; /* Add some margin for spacing */
+}
+
+.text-button-container {
+    display: flex;
+    justify-content: center;
+    gap: 5px; /* Adjust the gap as needed */
+    margin-top: 10px; /* Add some margin to the top */
+}
+
+.text-action-button {
+    background-color: #4A9DC7;
+    color: #ffeeb5;
+    padding: 8px 30px;
+    font-size: 25px;
+    border-radius: 5px;
+    border: 2px solid rgb(255, 225, 0); /* border for visibility */
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 
+        0 1px 3px #ffeeb5,
+        inset 0 2px 4px rgba(133, 190, 255, 0.227),
+        inset 0 -2px 1px #000000ba; 
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-left: 10px; 
+    margin-right: 10px;
+    text-shadow: 
+        0 0 4px rgba(255, 238, 181, 0.8), /* Glowing effect */
+        0 0 5px rgba(38, 38, 38, 0.766), /* Larger glow for softer edge */
+        0 0 2px rgb(0, 75, 11); /* Even larger glow for extended soft edge */
+}
+
+.text-action-button:hover {
+    background-color: #ffc014ed;
+    color: #00f2ff;
+    border: 2px solid rgb(255, 225, 0); /* border for visibility */
+    transform: translateY(-2px);
+}
+
+.text-action-button:active {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 5px; 
+    transform: translateY(1px);
+    border: 2px solid #c4ff72ab; /* border for visibility */
+
+}
+
+
+
+
+
+.text-selected-generate {
+    background-color: #ffc014ed;
+    color: #00f2ff;
+    border: 2px solid rgb(255, 225, 0);
+    border-radius: 5px;
+    box-shadow: 
+        0 1px 3px #ffeeb5,
+        inset 0 2px 4px rgba(133, 190, 255, 0.043),
+        inset 0 -2px 1px rgb(76, 175, 80);
+}
+
+.text-selected-generate:hover {
+    background-color: #ffc014ed;
+    color: #00f2ff;
+    border: 2px solid rgb(255, 225, 0); /* border for visibility */
+    border-radius: 5px;
+    transform: translateY(-2px);
+}
+
+.text-selected-generate:active {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 5px; 
+    transform: translateY(1px);
+    border: 2px solid #c4ff72ab; /* border for visibility */
+
+}
+
+.text-action-button2 {
+    background-color: #00d58a00;
+    color: #ffeeb5;
+    padding: 8px 18px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 2px solid rgb(255, 225, 0); /* border for visibility */
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 
+        0 1px 3px #ffeeb5,
+        inset 0 2px 4px rgba(133, 190, 255, 0.227),
+        inset 0 -2px 1px #000000ba; 
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 10px; 
+    margin-right: 10px;
+    text-shadow: 
+        0 0 4px rgba(255, 238, 181, 0.8), /* Glowing effect */
+        0 0 5px rgba(38, 38, 38, 0.766), /* Larger glow for softer edge */
+        0 0 2px rgb(0, 75, 11); /* Even larger glow for extended soft edge */
+}
+
+.text-action-button2.selected {
+    background-color: #ffc014ed;
+    color: #00f2ff;
+    border: 2px solid #c4ff72ab;
+}
+
+.text-action-button2:hover {
+    background-color: #ffc014ed;
+    color: #00f2ff;
+    border: 2px solid #c4ff72ab; /* border for visibility */
+    transform: translateY(-2px);
+}
+
+.text-action-button2:active {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 5px; 
+    transform: translateY(1px);
+    border: 2px solid #c4ff72ab; /* border for visibility */
+
+}
+
+.text-info-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.text-info-content {
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    background: #a2e0ff;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.95);
+    margin-top: 21px;
+    margin-bottom: 15px;
+    color: #333;
+    width: 375px;
+    height: 375px;
+    margin-left: auto; 
+    margin-right: auto;
+    overflow: hidden;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border: 2px solid rgb(255, 225, 0); 
+}
+
+.text-info-content h2 {
+    margin-top: 0;
+}
+
+.text-info-close {
+    position: relative;
+    font-size: 40px;
+    cursor: pointer;
+    text-shadow: 0 0 4px rgba(255, 238, 181, 0.8), 0 0 5px rgba(38, 38, 38, 0.766), 0 0 2px rgb(0, 75, 11);
+    color: #ffeeb5;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.text-info-icon {
+    position: relative;
+    font-size: 30px;
+    cursor: pointer;
+    text-shadow: 0 0 4px rgba(255, 238, 181, 0.8), 0 0 5px rgba(38, 38, 38, 0.766), 0 0 2px rgb(0, 75, 11);
+    color: #ffeeb560;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    padding-left: 0px;
+    padding-bottom: 5px;
+    margin-right: 5px;
+    margin-bottom: 35px;
+}
+
+.text-info-icon:hover {
+    position: relative;
+    font-size: 30px;
+    color: #ffeeb5;
+    cursor: pointer;
+    text-shadow: 0 0 4px rgba(255, 238, 181, 0.8), 0 0 5px rgba(38, 38, 38, 0.766), 0 0 2px rgb(0, 75, 11);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    padding-left: 0px;
+    padding-bottom: 5px;
+    margin-right: 5px;
+    margin-bottom: 35px;
+}
+
+

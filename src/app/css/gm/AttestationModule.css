@@ -1,0 +1,560 @@
+/* --------------------------------- */
+/* ----------ATTESTATION------------ */
+
+.attestation-module-container {
+    background-color: #68cbfc80;
+    border: 5px solid #68cbfc80; /* border for visibility */
+    padding: 20px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 500px;
+    min-width: 500px;
+    height: 750px;
+    box-shadow: 0 3px 8px #ffeeb5f4, inset 0 2px 4px rgba(133, 190, 255, 0.227), inset 0 -3px 2px #000000ba;
+    text-shadow: 0 0 4px rgba(255, 238, 181, 0.8), 0 0 5px rgba(38, 38, 38, 0.766), 0 0 2px rgb(0, 75, 11);
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+    color: #ffeeb5;
+}
+
+.attestation-module-container:hover {
+    background-color: #68f7fc6e;
+    border: 5px solid #5bea62ab; /* White border for visibility */
+
+}
+  
+.attestation-module-top-container {
+    position: relative;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+  
+.attestation-module-header-box {
+    padding: 5px;
+    align-items: center;
+}
+
+.attestation-module-header-box h1 {
+    padding: 5px;
+    padding-top: 10px;
+}
+
+
+.attestation-module-info-icon {
+    font-size: 20px;
+    cursor: pointer;
+    text-shadow: 0 0 4px rgba(255, 238, 181, 0.8), 0 0 5px rgba(38, 38, 38, 0.766), 0 0 2px rgb(0, 75, 11);
+    color: #ffeeb560;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 0px;
+}
+
+.attestation-module-info-icon:hover {
+    color: #ffeeb5;
+}
+
+.attestation-module-info-icon-box {
+     margin-bottom: 30px;
+     margin-left: 10px;
+}
+  
+.attestation-module-header {
+    margin: 0;
+    margin-left: 150px;
+    margin-top: 5px;
+}
+  
+.attestation-module-subheader {
+    margin: 10px 0;
+}
+  
+.attestation-module-input-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+}
+  
+.attestation-module-input-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+  
+.attestation-module-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background: #a2e0ff80;
+    border-radius: 5px;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.809);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: #ffeeb5f4;
+    font-size: 1em;
+    transition: max-height 1s ease-out, padding 0.6s ease-out;
+    overflow: hidden;
+    border: 2px solid rgb(255, 225, 0);
+}
+
+.attestation-module-textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background: #a2e0ff80;
+    border-radius: 5px;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.809);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: #ffeeb5f4;
+    font-size: 1em;
+    transition: max-height 1s ease-out, padding 0.6s ease-out;
+    overflow: hidden;
+    border: 2px solid rgb(255, 225, 0);
+}
+  
+.attestation-module-dropdown {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background: #a2e0ff80;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.809);
+    color: #ffeeb5f4;
+    font-size: 1em;
+    transition: max-height 1s ease-out, padding 0.6s ease-out;
+    overflow: hidden;
+    border: 2px solid rgb(255, 225, 0);
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24'><path fill='%23ffeeb5' d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 50px;
+
+}
+
+.attestation-module-attestation-preview {
+
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 18px;
+    background: #a2e0ff80;
+    border-radius: 5px;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.809);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #ffeeb5f4;
+    font-size: 1em;
+    transition: max-height 1s ease-out, padding 0.6s ease-out;
+    overflow: hidden;
+    border: 5px solid rgb(255, 225, 0);
+}
+  
+.attestation-module-undo-button {
+    background-color: #00d58a00;
+    color: #ffeeb5;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 0px;
+    margin: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid rgb(255, 225, 0);
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 1px 3px #ffeeb5, inset 0 2px 4px rgba(133, 190, 255, 0.227), inset 0 -2px 1px #000000ba;
+    text-shadow: 0 0 4px rgba(255, 238, 181, 0.8), 0 0 5px rgba(38, 38, 38, 0.766), 0 0 2px rgb(0, 75, 11);
+    width: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.attestation-module-undo-button:hover {
+    background-color: #ffc014ed;
+    color: #00f2ff;
+    border: 2px solid #c4ff72ab;
+    transform: translateY(-2px);
+}
+
+.attestation-module-undo-button:active {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    transform: translateY(1px);
+}
+
+.attestation-module-undo-button .fa-icon {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    line-height: 1;
+    transition: font-size 0.3s ease;
+}
+
+
+  
+.attestation-module-button-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+  
+.attestation-module-button {
+    background-color: #00d58a00;
+    color: #ffeeb5;
+    padding: 10px;
+    font-size: 26px;
+    border-radius: 5px;
+    border: 2px solid rgb(255, 225, 0);
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 1px 3px #ffeeb5, inset 0 2px 4px rgba(133, 190, 255, 0.227), inset 0 -2px 1px #000000ba;
+    text-shadow: 0 0 4px rgba(255, 238, 181, 0.8), 0 0 5px rgba(38, 38, 38, 0.766), 0 0 2px rgb(0, 75, 11);
+    width: 100%;
+    text-align: center;
+}
+  
+.attestation-module-button:hover {
+    background-color: #ffc014ed;
+    color: #00f2ff;
+}
+  
+.attestation-module-attest-button {
+    width: 100%;
+}
+  
+.attestation-module-attestation-preview {
+    width: 100%;
+    min-height: 240px;
+    margin-top: 8px;
+    padding: 15px;
+    border-radius: 5px;
+    background: #a2e0ff80;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.809);
+    border: 5px solid rgb(255, 225, 0);
+    color: #ffeeb5f4;
+    font-size: 1em;
+    word-wrap: break-word;
+    max-height: 100px; /* Set a fixed height for the preview area */
+    transition: max-height 1s ease-out, padding 0.6s ease-out;
+    border: 5px solid rgb(255, 225, 0);
+    overflow: hidden;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+
+  
+.attestation-module-attestation-preview::-webkit-scrollbar {
+    width: 12px;
+}
+  
+.attestation-module-attestation-preview::-webkit-scrollbar-track {
+    background: #a2e0ff80;
+    border-radius: 5px;
+}
+  
+.attestation-module-attestation-preview::-webkit-scrollbar-thumb {
+    background-color: #68cbfc;
+    border-radius: 5px;
+    border: 3px solid #a2e0ff80;
+}
+  
+.attestation-module-attestation {
+    background: #a2e0ff80;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.809);
+    color: #333;
+    border: 2px solid rgb(255, 225, 0);
+    text-align: left;
+}
+  
+.attestation-module-info-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+  
+.attestation-module-info-screen.show {
+    display: flex;
+}
+  
+.attestation-module-info-content {
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    background: #a2e0ff;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.95);
+    color: #333;
+    width: 375px;
+    height: 375px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    padding: 10px;
+    border: 2px solid rgb(255, 225, 0);
+}
+  
+.attestation-module-info-content h2 {
+    margin-top: 0px;
+}
+  
+.attestation-module-info-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 40px;
+    cursor: pointer;
+    text-shadow: 0 0 4px rgba(255, 238, 181, 0.8), 0 0 5px rgba(38, 38, 38, 0.766), 0 0 2px rgb(0, 75, 11);
+    color: #ffeeb5;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+  
+.attestation-module-attestations-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+  
+.attestation-module-attestations-screen.show {
+    display: flex;
+}
+  
+.attestation-module-attestations-content {
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    background: #a2e0ff;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.95);
+    color: #333;
+    width: 90%;
+    height: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    padding: 10px;
+    border: 2px solid rgb(255, 225, 0);
+}
+  
+.attestation-module-attestations-content h2 {
+    margin-top: 0px;
+}
+  
+.attestation-module-attestations-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 40px;
+    cursor: pointer;
+    text-shadow: 0 0 4px rgba(255, 238, 181, 0.8), 0 0 5px rgba(38, 38, 38, 0.766), 0 0 2px rgb(0, 75, 11);
+    color: #ffeeb5;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+  
+.attestation-module-attestations-container {
+    display: flex;
+    overflow-x: auto;
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+    margin-left: 60px;
+    margin-top: 20px;
+}
+
+.attestation-module-attestation-card {
+    background: #a2e0ff80;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.809);
+    color: #333;
+    border: 2px solid rgb(255, 225, 0);
+    text-align: left;
+    margin-right: 10px;
+    margin-top: 40px;
+    display: inline-block;
+    height: 80%;
+    min-width: 200px;
+    overflow-y: auto;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.attestation-module-scroll-button {
+    position: absolute;
+    left: 10px;
+    top: 10px; /* Adjusted to place the button outside of the scrolling area */
+    background-color: #00d58a00;
+    color: #ffeeb5;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid rgb(255, 225, 0);
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 1px 3px #ffeeb5, inset 0 2px 4px rgba(133, 190, 255, 0.227), inset 0 -2px 1px #000000ba;
+    text-shadow: 0 0 4px rgba(255, 238, 181, 0.8), 0 0 5px rgba(38, 38, 38, 0.766), 0 0 2px rgb(0, 75, 11);
+    z-index: 1; /* Ensure the button stays above the scrolling content */
+}
+
+.attestation-module-scroll-button:hover {
+    background-color: #ffc014ed;
+    color: #00f2ff;
+}
+
+.attestation-module-attestation-card::-webkit-scrollbar {
+    width: 12px;
+}
+
+.attestation-module-attestation-card::-webkit-scrollbar-track {
+    background: #a2e0ff80;
+    border-radius: 5px;
+}
+
+.attestation-module-attestation-card::-webkit-scrollbar-thumb {
+    background-color: #68cbfc;
+    border-radius: 5px;
+    border: 3px solid #a2e0ff80;
+}
+
+
+.attestation-module-slider-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 0px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.attestation-module-slider {
+    background: #a2e0ff;
+
+    opacity: 0.9;
+    width: 100%;
+    height: 25px; /* Set height to 25px */
+    -webkit-appearance: none; /* Remove default appearance */
+    appearance: none; /* Remove default appearance */
+    border-radius: 34px;
+    outline: none;
+    transition: background 0.6s;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.809);
+    border: 2px solid rgb(255, 225, 0)!important; /* border for visibility */
+    position: relative; /* Added for positioning */
+}
+
+.attestation-module-slider:hover {
+    opacity: 1;
+  }
+
+
+.attestation-module-slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Remove default appearance */
+    appearance: none; /* Remove default appearance */
+    width: 25px; /* Set width to 25px */
+    height: 25px; /* Set height to 25px */
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #fff5cfe6, #ffd700 50%, rgb(255, 165, 0)); /* Glossy effect */
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(135, 135, 135, 0.425), inset 0 1px 1px rgba(255, 255, 255, 0.8), inset 0 -1px 2px rgba(0, 0, 0, 0.386);
+    border: 2px solid rgb(255, 225, 0)!important; /* border for visibility */
+    position: relative;
+    z-index: 10; /* Ensure text stays above the thumb */
+}
+
+.attestation-module-slider::-moz-range-thumb {
+    width: 25px; /* Set width to 25px */
+    height: 25px; /* Set height to 25px */
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #fff5cfe6, #ffd700 50%, rgb(255, 165, 0)); /* Glossy effect */
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(135, 135, 135, 0.425), inset 0 2px 2px rgba(255, 255, 255, 0.8), inset 0 -1px 3px rgba(0, 0, 0, 0.386);
+    border: 2px solid rgb(255, 225, 0)!important; /* border for visibility */
+    position: relative;
+    z-index: 10; /* Ensure text stays above the thumb */
+}
+
+.attestation-module-slider::-ms-thumb {
+    width: 25px; /* Set width to 25px */
+    height: 25px; /* Set height to 25px */
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #fff5cfe6, #ffd700 50%, rgb(255, 165, 0)); /* Glossy effect */
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(135, 135, 135, 0.425), inset 0 2px 2px rgba(255, 255, 255, 0.8), inset 0 -1px 3px rgba(0, 0, 0, 0.386);
+    border: 2px solid rgb(255, 225, 0)!important; /* border for visibility */
+    position: relative;
+    z-index: 10; /* Ensure text stays above the thumb */
+}
+
+.attestation-module-slider-text {
+    position: absolute;
+    top: 0; /* Align text to the top */
+    left: 46.75%;
+    margin-left: 12px;
+    transform: translateX(-50%);
+    color: #ffeeb5;
+    font-weight: bold;
+    font-size: 13px;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
+    z-index: 11; /* Ensure text stays above the thumb */
+    pointer-events: none; /* Ensure it does not interfere with slider functionality */
+    height: 25px; /* Set height to match thumb */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.attestation-module-slider-label {
+    font-size: 1.5em;
+    align-items: center;
+    margin-top: 5px;
+
+
+}
